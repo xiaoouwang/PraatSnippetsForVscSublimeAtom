@@ -3,7 +3,7 @@
 		"publisher": "XiaoouWANGShanghai",
     "displayName": "awesomePraatSnippets",
     "description": "Best on market Praat Snippets for vscode by XiaoouWANG(xiaoouwang.github.io)",
-		"repository": ""
+		"repository": "https://github.com/xiaoouwang/PraatSnippetsForVscSublimeAtom"
     "version": "0.1.0",
     "engines": {
         "vscode": "^1.33.0"
