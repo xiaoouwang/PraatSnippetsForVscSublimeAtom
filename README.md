@@ -12,7 +12,7 @@ For all the bugs or requests or contributions, go to the [github page](https://g
 
 ## Important
 
-For the moment install [thisPlugin](https://marketplace.visualstudio.com/items?itemName=jordwest.praat-vscode) too, but soon it would be no longer necessary.
+Big features are coming...
 
 ## Why
 
