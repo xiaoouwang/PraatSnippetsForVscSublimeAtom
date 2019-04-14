@@ -8,6 +8,12 @@ This page is maintained by
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
+For all the bugs or requests or contributions, go to the [github page](https://github.com/xiaoouwang/PraatSnippetsForVscSublimeAtom).
+
+## Important
+
+For the moment install [thisPlugin](https://marketplace.visualstudio.com/items?itemName=jordwest.praat-vscode) too, but soon it would be no longer necessary.
+
 ## Why
 
 For so many years praat snippets have been missing from this wonderful world.
