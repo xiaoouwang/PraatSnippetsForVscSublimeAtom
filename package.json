@@ -1,0 +1,22 @@
+{
+    "name": "awesomepraatsnippets",
+		"publisher": "XiaoouWANGShanghai",
+    "displayName": "awesomePraatSnippets",
+    "description": "Best on market Praat Snippets for vscode by XiaoouWANG(xiaoouwang.github.io)",
+		"repository": ""
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "praat",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
