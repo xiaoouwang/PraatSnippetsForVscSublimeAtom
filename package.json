@@ -10,7 +10,7 @@
     "vscode": "^1.33.0"
   },
   "categories": [
-    "Languages"
+    "Programming Languages"
   ],
   "contributes": {
     "languages": [
@@ -23,6 +23,13 @@
         "extensions": [
           ".praat"
         ],
+     "grammars": [
+       {
+         "language": "praat",
+         "scopeName": "source.praat",
+         "path": "./syntaxes/Praat.tmLanguage"
+       }
+     ],
         "configuration": "./language-configuration.json"
       }
     ],
