@@ -32,12 +32,12 @@
 	"description": "erase the whole graphics"
 },
 
-"draw a sound signal ": {
+"draw a sound signal": {
 	"prefix": "drSignal",
 	"body": [
 		"Draw: 0, 0, 0, 0, \"yes\", \"Curve\""
 	],
-	"description": "draw a sound signal "
+	"description": "draw a sound signal"
 },
 
 "draw intensty": {
@@ -211,27 +211,45 @@
 	"prefix": "form",
 	"body": [
 		"form $1",
-		"$2",
+		"  $2",
 		"endform",
 		"$0"
 	],
 	"description": "create a form"
 },
 
-"input tab": {
+"create an option menu": {
+	"prefix": "option",
+	"body": [
+		"optionmenu ${1:text} ${2:defaultvalue(2)}",
+		"option $3",
+		"option $4"
+	],
+	"description": "create an option menu"
+},
+
+"create a comment": {
+	"prefix": "comment",
+	"body": [
+		"comment ${1:chosseFrom}"
+	],
+	"description": "create a comment"
+},
+
+"tab character": {
 	"prefix": "tab",
 	"body": [
 		"tab$"
 	],
-	"description": "input tab"
+	"description": "tab character"
 },
 
-"input newline": {
+"newline character": {
 	"prefix": "newLine",
 	"body": [
 		"newline$"
 	],
-	"description": "input newline"
+	"description": "newline character"
 },
 
 "select an object": {
@@ -273,7 +291,7 @@
 	"description": "while loop"
 },
 
-"if ": {
+"if": {
 	"prefix": "if",
 	"body": [
 		"if",
@@ -281,7 +299,7 @@
 		"endif",
 		"$0"
 	],
-	"description": "if "
+	"description": "if"
 },
 
 "if else": {

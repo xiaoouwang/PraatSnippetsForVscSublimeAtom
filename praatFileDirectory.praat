@@ -26,4 +26,6 @@ $0
 appendLine
 appendFileLine: "$1:filePath", $2:content
 $0
-#
+# allow user to choose createDirectory
+chooseDirectory
+chooseDirectory$ ("$1:chooseTheDirectoryContainingSound")

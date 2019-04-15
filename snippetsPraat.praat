@@ -37,7 +37,7 @@ setLineWidth
 Line width: $1:1
 # set line form
 setLineForm
-$1:Solid line $0
+$1:Solid line
 # set y label
 setY
 Text left: "yes", "$1"
@@ -91,13 +91,20 @@ $0
 # create a form
 form
 form $1
-  $2
+  $0
 endform
-$0
-# input tab
+# create an option menu
+option
+optionmenu $1:text $2:defaultvalue(2)
+option $3
+option $4
+# create a comment
+comment
+comment $1:chosseFrom
+# tab character
 tab
 tab$
-# input newline
+# newline character
 newLine
 newline$
 # select an object
@@ -112,28 +119,24 @@ Edit
 # for loop
 for
 for i from 1 to $1
-  $1:doSomething
+  $0:doSomething
 endfor
-$0
 # while loop
 while
 while $1
-  $2
+  $0
 endwhile
-$0
 # if
 if
 if
-  $1
+  $0
 endif
-$0
 # if else
 ifelse
 if $1
   $2
 elsif $3
-  $4
+  $0
 endif
-$0
 #
 

@@ -11,9 +11,23 @@ This page is maintained by
 For all the bugs or requests or contributions, go to the [github page](https://github.com/xiaoouwang/PraatSnippetsForVscSublimeAtom).
 
 ## Features
+
 2019-04-14-Tues : Add a little part of snippets
+
 2019-04-15-Mon : Add syntax highlighting
+
 More features are coming...
+
+## Syntax
+
+The snippets use the new syntax. For information :
+
+* (Old syntax)
+Create Sound as pure tone... tone 1 0 0.4 44100 440 0.2 0.01 0.01
+* (intermediate syntax)
+("Create Sound as pure tone...", "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01)
+* (new syntax)
+Create Sound as pure tone: "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01
 
 ## Why
 
