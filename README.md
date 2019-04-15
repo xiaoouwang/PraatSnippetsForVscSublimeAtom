@@ -11,8 +11,8 @@ This page is maintained by
 For all the bugs or requests or contributions, go to the [github page](https://github.com/xiaoouwang/PraatSnippetsForVscSublimeAtom).
 
 ## Important
-
-Big features are coming...
+### 2019-04-15-Mon Add syntax highlighting
+### More features are coming...
 
 ## Why
 
