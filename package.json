@@ -5,7 +5,7 @@
   "displayName": "awesomePraatSnippets",
   "description": "Best on market Praat Snippets for vscode by XiaoouWANG(xiaoouwang.github.io)",
   "repository": "https://github.com/xiaoouwang/PraatSnippetsForVscSublimeAtom",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "engines": {
     "vscode": "^1.33.0"
   },
@@ -23,13 +23,13 @@
         "extensions": [
           ".praat"
         ],
-     "grammars": [
-       {
-         "language": "praat",
-         "scopeName": "source.praat",
-         "path": "./syntaxes/Praat.tmLanguage"
-       }
-     ],
+        "grammars": [
+          {
+            "language": "praat",
+            "scopeName": "source.praat",
+            "path": "./syntaxes/Praat.tmLanguage"
+          }
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
