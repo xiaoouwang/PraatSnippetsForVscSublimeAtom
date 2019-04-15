@@ -25,7 +25,7 @@ The snippets use the new syntax. For information :
 * (Old syntax)
 Create Sound as pure tone... tone 1 0 0.4 44100 440 0.2 0.01 0.01
 * (intermediate syntax)
-("Create Sound as pure tone...", "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01)
+"Create Sound as pure tone...", "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01
 * (new syntax)
 Create Sound as pure tone: "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01
 
