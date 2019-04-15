@@ -1,0 +1,299 @@
+{
+"create pitch object": {
+	"prefix": "crPitch",
+	"body": [
+		"To Pitch: 0, 75, 600"
+	],
+	"description": "create pitch object"
+},
+
+"create intensity object": {
+	"prefix": "crIntensity",
+	"body": [
+		"To Intensity: 100, 0, \"yes\""
+	],
+	"description": "create intensity object"
+},
+
+"create a tone with duration and fundamental frequency": {
+	"prefix": "crTone",
+	"body": [
+		"Create Sound as pure tone: \"${1:name}\", 1, 0, ${2:duration}, 44100, ${3:fundamentalFrequency}, 0.2, 0.01, 0.01",
+		"$0"
+	],
+	"description": "create a tone with duration and fundamental frequency"
+},
+
+"erase the whole graphics": {
+	"prefix": "eraseGraph",
+	"body": [
+		"Erase all"
+	],
+	"description": "erase the whole graphics"
+},
+
+"draw a sound signal ": {
+	"prefix": "drSignal",
+	"body": [
+		"Draw: 0, 0, 0, 0, \"yes\", \"Curve\""
+	],
+	"description": "draw a sound signal "
+},
+
+"draw intensty": {
+	"prefix": "drSignal",
+	"body": [
+		"Draw: 0, 0, 0, 0, \"no\""
+	],
+	"description": "draw intensty"
+},
+
+"draw inner box": {
+	"prefix": "drInnerBox",
+	"body": [
+		"Draw inner box"
+	],
+	"description": "draw inner box"
+},
+
+"set Y step": {
+	"prefix": "setYstep",
+	"body": [
+		"Marks left every: 1, $2, \"yes\", \"yes\", \"no\""
+	],
+	"description": "set Y step"
+},
+
+"draw pitch": {
+	"prefix": "drPitch",
+	"body": [
+		"Draw: 0, 0, ${1:range1}, ${2:range2}, \"no\""
+	],
+	"description": "draw pitch"
+},
+
+"set outer viewport": {
+	"prefix": "setOuterView",
+	"body": [
+		"Select outer viewport: 0, ${1:horizontal}, ${2:verticalUp}, ${3:verticalDown}"
+	],
+	"description": "set outer viewport"
+},
+
+"set line width": {
+	"prefix": "setLineWidth",
+	"body": [
+		"Line width: ${1:1}"
+	],
+	"description": "set line width"
+},
+
+"set line form": {
+	"prefix": "setLineForm",
+	"body": [
+		"${1:Solid} line $0"
+	],
+	"description": "set line form"
+},
+
+"set y label": {
+	"prefix": "setY",
+	"body": [
+		"Text left: \"yes\", \"$1\"",
+		"$0"
+	],
+	"description": "set y label"
+},
+
+"write information": {
+	"prefix": "print",
+	"body": [
+		"writeInfoLine: $1",
+		"$0"
+	],
+	"description": "write information"
+},
+
+"append information": {
+	"prefix": "append",
+	"body": [
+		"appendInfoLine: $1",
+		"$0"
+	],
+	"description": "append information"
+},
+
+"clear information": {
+	"prefix": "clear",
+	"body": [
+		"clearinfo"
+	],
+	"description": "clear information"
+},
+
+"output the info window": {
+	"prefix": "printInfoWindow",
+	"body": [
+		"appendFile: \"${1:outputFilePath}\", info$ ( )",
+		"$0"
+	],
+	"description": "output the info window"
+},
+
+"remove a file": {
+	"prefix": "remove",
+	"body": [
+		"Remove"
+	],
+	"description": "remove a file"
+},
+
+"play a sound": {
+	"prefix": "play",
+	"body": [
+		"Play"
+	],
+	"description": "play a sound"
+},
+
+"play a pitch": {
+	"prefix": "playPitch",
+	"body": [
+		"Hum"
+	],
+	"description": "play a pitch"
+},
+
+"create directory": {
+	"prefix": "createDirectory",
+	"body": [
+		"createDirectory: ${1:directoryPath}"
+	],
+	"description": "create directory"
+},
+
+"delete file": {
+	"prefix": "deleteFile",
+	"body": [
+		"deleteFile: ${1:filePath}"
+	],
+	"description": "delete file"
+},
+
+"check file existence and readability": {
+	"prefix": "checkFile",
+	"body": [
+		"fileReadable ($1)",
+		"$0"
+	],
+	"description": "check file existence and readability"
+},
+
+"write line to file": {
+	"prefix": "writeLine",
+	"body": [
+		"writeFileLine: \"${1:filePath}\", ${2:content}",
+		"$0"
+	],
+	"description": "write line to file"
+},
+
+"append line to file, no need to have the file prexisting": {
+	"prefix": "appendLine",
+	"body": [
+		"appendFileLine: \"${1:filePath}\", ${2:content}",
+		"$0"
+	],
+	"description": "append line to file, no need to have the file prexisting"
+},
+
+"create a form": {
+	"prefix": "form",
+	"body": [
+		"form $1",
+		"$2",
+		"endform",
+		"$0"
+	],
+	"description": "create a form"
+},
+
+"input tab": {
+	"prefix": "tab",
+	"body": [
+		"tab$"
+	],
+	"description": "input tab"
+},
+
+"input newline": {
+	"prefix": "newLine",
+	"body": [
+		"newline$"
+	],
+	"description": "input newline"
+},
+
+"select an object": {
+	"prefix": "selObject",
+	"body": [
+		"selectObject: $1",
+		"$0"
+	],
+	"description": "select an object"
+},
+
+"enter edit window": {
+	"prefix": "edit",
+	"body": [
+		"Edit"
+	],
+	"description": "enter edit window"
+},
+
+"for loop": {
+	"prefix": "for",
+	"body": [
+		"for i from 1 to $1",
+		"  ${1:doSomething}",
+		"endfor",
+		"$0"
+	],
+	"description": "for loop"
+},
+
+"while loop": {
+	"prefix": "while",
+	"body": [
+		"while $1",
+		"  $2",
+		"endwhile",
+		"$0"
+	],
+	"description": "while loop"
+},
+
+"if ": {
+	"prefix": "if",
+	"body": [
+		"if",
+		"  $1",
+		"endif",
+		"$0"
+	],
+	"description": "if "
+},
+
+"if else": {
+	"prefix": "ifelse",
+	"body": [
+		"if $1",
+		"  $2",
+		"elsif $3",
+		"  $4",
+		"endif",
+		"$0"
+	],
+	"description": "if else"
+}
+}

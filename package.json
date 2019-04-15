@@ -23,14 +23,14 @@
         "extensions": [
           ".praat"
         ],
-        "grammars": [
-          {
-            "language": "praat",
-            "scopeName": "source.praat",
-            "path": "./syntaxes/Praat.tmLanguage"
-          }
-        ],
         "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "praat",
+        "scopeName": "source.praat",
+        "path": "./syntaxes/Praat.tmLanguage"
       }
     ],
     "snippets": [
