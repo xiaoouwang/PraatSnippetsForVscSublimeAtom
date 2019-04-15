@@ -17,6 +17,7 @@ For all the bugs or requests or contributions, go to the [github page](https://g
 ## Why
 
 For so many years praat snippets have been missing from this wonderful world.
+
 Here they are.
 
 Install it and the best is yet to come (more snippets, better documentation, better snippets logic and structure).
