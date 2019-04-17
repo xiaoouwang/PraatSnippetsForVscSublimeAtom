@@ -1,19 +1,19 @@
-### graphics
+### graphics beginning
 # erase the whole graphics
 eraseGraph
 Erase all
-# draw a sound signal
-drSignal
+# draw a sound waveform
+drWaveform
 Draw: 0, 0, 0, 0, "yes", "Curve"
 # draw intensty
-drSignal
-Draw: 0, 0, 0, 0, "no"
+drIntensity
+Draw: 0, $1:timeRange, 0, $2:decibelRange, "no"
 # draw inner box
 drInnerBox
 Draw inner box
 # set Y step
 setYstep
-Marks left every: 1, $2, "yes", "yes", "no"
+Marks left every: 1, $2:maybe50, "yes", "yes", "no"
 # draw pitch
 drPitch
 Draw: 0, 0, $1:range1, $2:range2, "no"
@@ -25,8 +25,11 @@ setLineWidth
 Line width: $1:1
 # set line form
 setLineForm
-$1:Solid line $0
+$1:Solid line
 # set y label
 setY
 Text left: "yes", "$1"
 $0
+# set color
+color
+$1:Red

@@ -1,30 +1,28 @@
-### information window
-# write information
-write
-writeInfoLine: $1
+### information beginning
+# write information in new line
+writeLine
+writeInfoLine: $1:multipleInfoSeperatedByComma
 $0
-# append information
-append
-appendInfoLine: $1
+# append information in new line
+appendLine
+appendInfoLine: $1:multipleInfoSeperatedByComma
 $0
 # clear information
 clear
 clearinfo
 # output the info window
 printInfoWindow
-appendFile: "$1:outputFilePath", info$ ( )
+appendFile: "$1:outputFilePath", info$()
 $0
+### interaction with user
+# allow user to choose directory
+chooseDirectory
+chooseDirectory$: "$1:chooseTheDirectoryContainingSound"
+# allow user to choose file to open
+chooseFile
+chooseReadFile$: "$1:open a file"
 # create a form
 form
 form $1
-$2
+  $2
 endform
-$0
-# create an option menu
-option
-optionmenu $1:text $2:defaultvalue(2)
-option $3
-option $4
-# create a comment
-comment
-comment $1:chosseFro

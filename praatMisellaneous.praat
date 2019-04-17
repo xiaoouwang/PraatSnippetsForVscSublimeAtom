@@ -1,10 +1,4 @@
-### others
-# create a form
-form
-form $1
-$2
-endform
-$0
+### others beginning
 # tab character
 tab
 tab$
@@ -15,10 +9,6 @@ newline$
 selObject
 selectObject: $1
 $0
-# enter edit window
-edit
-Edit
-#
 ### conditions and loop
 # for loop
 for
@@ -46,4 +36,3 @@ elsif $3
   $4
 endif
 $0
-#

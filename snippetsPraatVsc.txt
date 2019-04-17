@@ -1,307 +1,384 @@
 {
-"create pitch object": {
-	"prefix": "crPitch",
+"create an edit window": {
+	"prefix": "edit",
 	"body": [
-		"To Pitch: 0, 75, 600"
+		"Edit",
 	],
-	"description": "create pitch object"
+	"description": "create an edit window"
 },
-
-"create intensity object": {
-	"prefix": "crIntensity",
+"enter an edit window": {
+	"prefix": "enterEdit",
 	"body": [
-		"To Intensity: 100, 0, \"yes\""
+		"editor: \"${1:type} ${2:name}\"",
 	],
-	"description": "create intensity object"
+	"description": "enter an edit window"
 },
-
-"create a tone with duration and fundamental frequency": {
-	"prefix": "crTone",
+"zoom": {
+	"prefix": "zoom",
 	"body": [
-		"Create Sound as pure tone: \"${1:name}\", 1, 0, ${2:duration}, 44100, ${3:fundamentalFrequency}, 0.2, 0.01, 0.01",
-		"$0"
+		"Zoom in",
 	],
-	"description": "create a tone with duration and fundamental frequency"
+	"description": "zoom"
 },
-
-"erase the whole graphics": {
-	"prefix": "eraseGraph",
+"end an editor": {
+	"prefix": "endEditor",
 	"body": [
-		"Erase all"
+		"endeditor",
 	],
-	"description": "erase the whole graphics"
+	"description": "end an editor"
 },
-
-"draw a sound signal": {
-	"prefix": "drSignal",
+"close an editor": {
+	"prefix": "close",
 	"body": [
-		"Draw: 0, 0, 0, 0, \"yes\", \"Curve\""
+		"Close",
 	],
-	"description": "draw a sound signal"
+	"description": "close an editor"
 },
-
-"draw intensty": {
-	"prefix": "drSignal",
+"move cursor to": {
+	"prefix": "moveCursor",
 	"body": [
-		"Draw: 0, 0, 0, 0, \"no\""
+		"Move cursor to: ${1:valueInSecond}",
 	],
-	"description": "draw intensty"
+	"description": "move cursor to"
 },
-
-"draw inner box": {
-	"prefix": "drInnerBox",
+"move cursor by": {
+	"prefix": "moveCursorBy",
 	"body": [
-		"Draw inner box"
+		"Move end of seletion by: ${2:valueInSecond}",
 	],
-	"description": "draw inner box"
+	"description": "move cursor by"
 },
-
-"set Y step": {
-	"prefix": "setYstep",
+"zoom selection": {
+	"prefix": "zoomSelection",
 	"body": [
-		"Marks left every: 1, $2, \"yes\", \"yes\", \"no\""
+		"Zoom to selection",
 	],
-	"description": "set Y step"
+	"description": "zoom selection"
 },
-
-"draw pitch": {
-	"prefix": "drPitch",
+"extract selection": {
+	"prefix": "extractSelection",
 	"body": [
-		"Draw: 0, 0, ${1:range1}, ${2:range2}, \"no\""
+		"Extract selected sound (time from 0)",
 	],
-	"description": "draw pitch"
+	"description": "extract selection"
 },
-
-"set outer viewport": {
-	"prefix": "setOuterView",
+"play the editor": {
+	"prefix": "playEditor",
 	"body": [
-		"Select outer viewport: 0, ${1:horizontal}, ${2:verticalUp}, ${3:verticalDown}"
+		"Play window",
 	],
-	"description": "set outer viewport"
+	"description": "play the editor"
 },
-
-"set line width": {
-	"prefix": "setLineWidth",
+"draw visible sound": {
+	"prefix": "drVisible",
 	"body": [
-		"Line width: ${1:1}"
+		"Draw visible sound: \"no\", \"yes\", 0, 0, \"no\", \"no\", \"no\", \"yes\"",
 	],
-	"description": "set line width"
+	"description": "draw visible sound"
 },
-
-"set line form": {
-	"prefix": "setLineForm",
+"extract selectionHamming": {
+	"prefix": "extractHamming",
 	"body": [
-		"${1:Solid} line $0"
+		"Extract selected sound (windowed:) \"slice\", \"Hamming\", 1, \"yes### file and directory operations beginning",
 	],
-	"description": "set line form"
+	"description": "extract selectionHamming"
 },
-
-"set y label": {
-	"prefix": "setY",
+"read a file": {
+	"prefix": "readFile",
 	"body": [
-		"Text left: \"yes\", \"$1\"",
-		"$0"
+		"Read from file: \"$1\"",
 	],
-	"description": "set y label"
+	"description": "read a file"
 },
-
-"write information": {
-	"prefix": "print",
+"read long file": {
+	"prefix": "readLongFile",
 	"body": [
-		"writeInfoLine: $1",
-		"$0"
+		"Open long sound file: \"$1\"",
 	],
-	"description": "write information"
+	"description": "read long file"
 },
-
-"append information": {
-	"prefix": "append",
+"save wav file": {
+	"prefix": "saveWav",
 	"body": [
-		"appendInfoLine: $1",
-		"$0"
+		"Save as WAV file: \"$1\"",
 	],
-	"description": "append information"
+	"description": "save wav file"
 },
-
-"clear information": {
-	"prefix": "clear",
+"save txt file (textgrid too)": {
+	"prefix": "saveTxt",
 	"body": [
-		"clearinfo"
+		"Save as text file: \"$1\"",
 	],
-	"description": "clear information"
+	"description": "save txt file (textgrid too)"
 },
-
-"output the info window": {
-	"prefix": "printInfoWindow",
-	"body": [
-		"appendFile: \"${1:outputFilePath}\", info$ ( )",
-		"$0"
-	],
-	"description": "output the info window"
-},
-
 "remove a file": {
 	"prefix": "remove",
 	"body": [
-		"Remove"
+		"Remove",
 	],
 	"description": "remove a file"
 },
-
 "play a sound": {
 	"prefix": "play",
 	"body": [
-		"Play"
+		"Play",
 	],
 	"description": "play a sound"
 },
-
 "play a pitch": {
 	"prefix": "playPitch",
 	"body": [
-		"Hum"
+		"Hum",
 	],
 	"description": "play a pitch"
 },
-
 "create directory": {
 	"prefix": "createDirectory",
 	"body": [
-		"createDirectory: ${1:directoryPath}"
+		"createDirectory: \"${1:directoryPath}\"",
 	],
 	"description": "create directory"
 },
-
 "delete file": {
 	"prefix": "deleteFile",
 	"body": [
-		"deleteFile: ${1:filePath}"
+		"deleteFile: ${1:filePath}",
 	],
 	"description": "delete file"
 },
-
 "check file existence and readability": {
 	"prefix": "checkFile",
 	"body": [
 		"fileReadable ($1)",
-		"$0"
+		"$0",
 	],
 	"description": "check file existence and readability"
 },
-
 "write line to file": {
-	"prefix": "writeLine",
+	"prefix": "writeLineToFile",
 	"body": [
 		"writeFileLine: \"${1:filePath}\", ${2:content}",
-		"$0"
+		"$0",
 	],
 	"description": "write line to file"
 },
-
 "append line to file, no need to have the file prexisting": {
 	"prefix": "appendLine",
 	"body": [
 		"appendFileLine: \"${1:filePath}\", ${2:content}",
-		"$0"
+		"$0### formulas beginning",
 	],
 	"description": "append line to file, no need to have the file prexisting"
 },
-
+"round number to zero": {
+	"prefix": "round",
+	"body": [
+		"(${r:ound1number})",
+	],
+	"description": "round number to zero"
+},
+"round number to decimal precision": {
+	"prefix": "roundPrecision",
+	"body": [
+		"(${n:umberfixed1number21precision}),",
+		"$0### graphics beginning",
+	],
+	"description": "round number to decimal precision"
+},
+"erase the whole graphics": {
+	"prefix": "eraseGraph",
+	"body": [
+		"Erase all",
+	],
+	"description": "erase the whole graphics"
+},
+"draw a sound waveform": {
+	"prefix": "drWaveform",
+	"body": [
+		"Draw: 0, 0, 0, 0, \"yes\", \"Curve\"",
+	],
+	"description": "draw a sound waveform"
+},
+"draw intensty": {
+	"prefix": "drIntensity",
+	"body": [
+		"Draw: 0, ${1:timeRange}, 0, ${2:decibelRange}, \"no\"",
+	],
+	"description": "draw intensty"
+},
+"draw inner box": {
+	"prefix": "drInnerBox",
+	"body": [
+		"Draw inner box",
+	],
+	"description": "draw inner box"
+},
+"set Y step": {
+	"prefix": "setYstep",
+	"body": [
+		"Marks left every: 1, ${2:maybe50}, \"yes\", \"yes\", \"no\"",
+	],
+	"description": "set Y step"
+},
+"draw pitch": {
+	"prefix": "drPitch",
+	"body": [
+		"Draw: 0, 0, ${1:range1}, ${2:range2}, \"no\"",
+	],
+	"description": "draw pitch"
+},
+"set outer viewport": {
+	"prefix": "setOuterView",
+	"body": [
+		"Select outer viewport: 0, ${1:horizontal}, ${2:verticalUp}, ${3:verticalDown}",
+	],
+	"description": "set outer viewport"
+},
+"set line width": {
+	"prefix": "setLineWidth",
+	"body": [
+		"Line width: ${1:1}",
+	],
+	"description": "set line width"
+},
+"set line form": {
+	"prefix": "setLineForm",
+	"body": [
+		"${1:Solid} line",
+	],
+	"description": "set line form"
+},
+"set y label": {
+	"prefix": "setY",
+	"body": [
+		"Text left: \"yes\", \"$1\"",
+		"$0",
+	],
+	"description": "set y label"
+},
+"set color": {
+	"prefix": "color",
+	"body": [
+		"${1:Red###} information beginning",
+	],
+	"description": "set color"
+},
+"write information in new line": {
+	"prefix": "writeLine",
+	"body": [
+		"writeInfoLine: ${1:multipleInfoSeperatedByComma}",
+		"$0",
+	],
+	"description": "write information in new line"
+},
+"append information in new line": {
+	"prefix": "appendLine",
+	"body": [
+		"appendInfoLine: ${1:multipleInfoSeperatedByComma}",
+		"$0",
+	],
+	"description": "append information in new line"
+},
+"clear information": {
+	"prefix": "clear",
+	"body": [
+		"clearinfo",
+	],
+	"description": "clear information"
+},
+"output the info window": {
+	"prefix": "printInfoWindow",
+	"body": [
+		"appendFile: \"${1:outputFilePath}\", ($info)",
+		"$0",
+	],
+	"description": "output the info window"
+},
+"allow user to choose directory": {
+	"prefix": "chooseDirectory",
+	"body": [
+		"chooseDirectory$: \"${1:chooseTheDirectoryContainingSound}\"",
+	],
+	"description": "allow user to choose directory"
+},
+"allow user to choose file to open": {
+	"prefix": "chooseFile",
+	"body": [
+		"chooseReadFile$: \"${1:open} a file\"",
+	],
+	"description": "allow user to choose file to open"
+},
+"create a form": {
+	"prefix": "form",
+	"body": [
+		"form $1",
+		"  $2",
+		"endform### others beginning",
+	],
+	"description": "create a form"
+},
 "create a form": {
 	"prefix": "form",
 	"body": [
 		"form $1",
 		"  $2",
 		"endform",
-		"$0"
+		"$0",
 	],
 	"description": "create a form"
 },
-
-"create an option menu": {
-	"prefix": "option",
-	"body": [
-		"optionmenu ${1:text} ${2:defaultvalue(2)}",
-		"option $3",
-		"option $4"
-	],
-	"description": "create an option menu"
-},
-
-"create a comment": {
-	"prefix": "comment",
-	"body": [
-		"comment ${1:chosseFrom}"
-	],
-	"description": "create a comment"
-},
-
 "tab character": {
 	"prefix": "tab",
 	"body": [
-		"tab$"
+		"tab$",
 	],
 	"description": "tab character"
 },
-
 "newline character": {
 	"prefix": "newLine",
 	"body": [
-		"newline$"
+		"newline$",
 	],
 	"description": "newline character"
 },
-
 "select an object": {
 	"prefix": "selObject",
 	"body": [
 		"selectObject: $1",
-		"$0"
+		"$0",
 	],
 	"description": "select an object"
 },
-
-"enter edit window": {
-	"prefix": "edit",
-	"body": [
-		"Edit"
-	],
-	"description": "enter edit window"
-},
-
 "for loop": {
 	"prefix": "for",
 	"body": [
 		"for i from 1 to $1",
 		"  ${1:doSomething}",
 		"endfor",
-		"$0"
+		"$0",
 	],
 	"description": "for loop"
 },
-
 "while loop": {
 	"prefix": "while",
 	"body": [
 		"while $1",
 		"  $2",
 		"endwhile",
-		"$0"
+		"$0",
 	],
 	"description": "while loop"
 },
-
 "if": {
 	"prefix": "if",
 	"body": [
 		"if",
 		"  $1",
 		"endif",
-		"$0"
+		"$0",
 	],
 	"description": "if"
 },
-
 "if else": {
 	"prefix": "ifelse",
 	"body": [
@@ -310,8 +387,188 @@
 		"elsif $3",
 		"  $4",
 		"endif",
-		"$0"
+		"$0### object creation beginning",
 	],
 	"description": "if else"
+},
+"create textgrid object": {
+	"prefix": "toTextgrid",
+	"body": [
+		"To TextGrid: \"${1:muitipleTiersSeperatedBySpace}\", \"${2:eventTier}\"",
+		"$0",
+	],
+	"description": "create textgrid object"
+},
+"create formant object": {
+	"prefix": "toFormant",
+	"body": [
+		"To Formant (burg:) 0, 5, ${1:5000forMale5500forWomen}, 0.025, 50",
+		"$0",
+	],
+	"description": "create formant object"
+},
+"create pitch object": {
+	"prefix": "toPitch",
+	"body": [
+		"To Pitch: ${1:0timestep}, ${1:75floor}, ${2:600ceiling}",
+	],
+	"description": "create pitch object"
+},
+"create intensity object": {
+	"prefix": "toIntensity",
+	"body": [
+		"To Intensity: (${1:100maximumPitch}), (${2:0timestep}), \"yes\"",
+	],
+	"description": "create intensity object"
+},
+"create a tone with duration and fundamental frequency": {
+	"prefix": "toTone",
+	"body": [
+		"Create Sound as pure tone: \"${1:objectName}\", 1, 0, ${2:duration}, 44100, ${3:fundamentalFrequency}, 0.2, 0.01, 0.01",
+		"$0",
+	],
+	"description": "create a tone with duration and fundamental frequency"
+},
+"create sound from formula": {
+	"prefix": "toSoundwithFormula",
+	"body": [
+		"Create Sound from formula \"${1:objectName}\", 1, 0, ${2:duration}, ${3:frequency}, \"${4:formula}\"",
+		"$0",
+	],
+	"description": "create sound from formula"
+},
+"choose selected object": {
+	"prefix": "chooseSelected",
+	"body": [
+		"(selected)",
+	],
+	"description": "choose selected object"
+},
+"copy an object (often useful to make a object last on the list)": {
+	"prefix": "Copy: "$1:newname"",
+	"body": [
+		"$0",
+	],
+	"description": "copy an object (often useful to make a object last on the list)"
+},
+"remove selected files": {
+	"prefix": "removeSelected",
+	"body": [
+		"Remove",
+	],
+	"description": "remove selected files"
+},
+"play a sound": {
+	"prefix": "play",
+	"body": [
+		"Play",
+	],
+	"description": "play a sound"
+},
+"play a pitch": {
+	"prefix": "playPitch",
+	"body": [
+		"Hum",
+	],
+	"description": "play a pitch"
+},
+"rename an object": {
+	"prefix": "rename",
+	"body": [
+		"Rename: \"${1:newname}\"",
+	],
+	"description": "rename an object"
+},
+"convert to number": {
+	"prefix": "convertNumber",
+	"body": [
+		"(${n:umber1stringToConvert})",
+	],
+	"description": "convert to number"
+},
+"convert to string": {
+	"prefix": "convertString",
+	"body": [
+		"(${s:tring2numberToConvert})",
+	],
+	"description": "convert to string"
+},
+"select an object": {
+	"prefix": "select",
+	"body": [
+		"selectObject: ${1:multipleObjectsSeperatedbyComma}",
+	],
+	"description": "select an object"
+},
+"plus an object": {
+	"prefix": "plus",
+	"body": [
+		"plusObject: $1",
+	],
+	"description": "plus an object"
+},
+"minus an object": {
+	"prefix": "minus",
+	"body": [
+		"minusObject: $1",
+	],
+	"description": "minus an object"
+},
+"remove an object without selecting": {
+	"prefix": "removeObject",
+	"body": [
+		"removeObject: ${1:differentObjectsSeperatedByComma}",
+	],
+	"description": "remove an object without selecting"
+},
+"get maximum pitch": {
+	"prefix": "getMaximumPitch",
+	"body": [
+		"Get maximum: ${1:0timerange}, 0, \"Hertz\", \"Parabolic\"",
+		"$0",
+	],
+	"description": "get maximum pitch"
+},
+"get sound frequency": {
+	"prefix": "getFrequency",
+	"body": [
+		"Get sampling frequency",
+	],
+	"description": "get sound frequency"
+},
+"get information": {
+	"prefix": "getInfo",
+	"body": [
+		"Info",
+	],
+	"description": "get information"
+},
+"get sound duration": {
+	"prefix": "getDuration",
+	"body": [
+		"Get total duration",
+	],
+	"description": "get sound duration"
+},
+"get mean": {
+	"prefix": "getMean",
+	"body": [
+		"Get mean: 1, 0, 0, \"Hertz\"",
+	],
+	"description": "get mean"
+},
+"get standard deviation": {
+	"prefix": "getSd",
+	"body": [
+		"Get standard deviation: 1, 0, 0, \"Hertz\"",
+	],
+	"description": "get standard deviation"
+},
+"get time of maximum formant": {
+	"prefix": "getTimeMaximumFormant",
+	"body": [
+		"Get time of maximum: ${1:whichFormant}, 0, 0, \"Hertz\", \"Parabolic\"",
+	],
+	"description": "get time of maximum formant"
 }
 }
