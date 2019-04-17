@@ -12,9 +12,11 @@ For all the bugs or requests or contributions, go to the [github page](https://g
 
 ## Features
 
-2019-04-14-Tues : Add a little part of snippets
+* 2019-04-17-Wed : Add a lot snippets, still lack a decent documentation
 
-2019-04-15-Mon : Add syntax highlighting
+* 2019-04-14-Tues : Add a little part of snippets
+
+* 2019-04-15-Mon : Add syntax highlighting
 
 More features are coming...
 
