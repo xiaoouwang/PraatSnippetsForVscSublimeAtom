@@ -5,7 +5,7 @@
   "displayName": "awesomePraatSnippets",
   "description": "Best on market Praat Snippets for vscode by XiaoouWANG(xiaoouwang.github.io)",
   "repository": "https://github.com/xiaoouwang/PraatSnippetsForVscSublimeAtom",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "engines": {
     "vscode": "^1.33.0"
   },
