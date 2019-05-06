@@ -2,7 +2,7 @@
 "create an edit window": {
 	"prefix": "edit",
 	"body": [
-		"Edit",
+		"Edit"
 	],
 	"description": "create an edit window"
 },

@@ -11,6 +11,10 @@ This page is maintained by
 
 For all the bugs or requests or contributions, go to the [github page](https://github.com/xiaoouwang/PraatSnippetsForVscSublimeAtom).
 
+Show us some support here ! :)
+
+[![Foo](img/2019-04-30-14-40-25.png)](https://www.paypal.com/pools/c/8el5OFsb8R)
+
 ## How to contribute (add, batch generate your own snippets in any of the forementioned 3 editors)
 
 Go to https://xiaoouwang.github.io/batch_snippets_generator_converter_for_Vsc_Sublime_Atom/, input the praat code in the stated format and click convert.
