@@ -4,8 +4,8 @@ Praat snippets for vsc(visual studio code), atom and sublime text.
 
 This page is maintained by
 
-* [Xiaoou WANG (phd student in speech science, master student in natural language processing)](http://xiaoouwang.github.io)
-* [Xingyu LIU (passionate nlp lover)](https://github.com/xingyuliuNLP)
+* [Xiaoou WANG (phd student in speech science)](http://xiaoouwang.github.io)
+* [Xingyu LIU (master student in natural language processing)](https://github.com/xingyuliuNLP)
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 

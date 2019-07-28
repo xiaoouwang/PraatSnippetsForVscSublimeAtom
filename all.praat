@@ -142,12 +142,6 @@ form
 form $1
   $2
 endform### others beginning
-# create a form
-form
-form $1
-  $2
-endform
-$0
 # tab character
 tab
 tab$
@@ -268,7 +262,7 @@ Get standard deviation: 1, 0, 0, "Hertz"
 getTimeMaximumFormant
 Get time of maximum: $1:whichFormant, 0, 0, "Hertz", "Parabolic"
 ### routines beginning : these are very common tasks in daily scripting files. We call them routines.
-# remove all
+# remove all/caution!
 removeAll
 select all
 Remove
