@@ -1,383 +1,385 @@
-"create an edit window": {
-  "prefix": "edit",
-  "body": [
-    "Edit"
-  ],
-  "description": "create an edit window"
-},
-"enter an edit window type + name": {
-  "prefix": "enterEdit",
-  "body": [
-    "editor: \"$1 $2\""
-  ],
-  "description": "enter an edit window type + name"
-},
-"zoom": {
-  "prefix": "zoom",
-  "body": [
-    "Zoom in"
-  ],
-  "description": "zoom"
-},
-"end an editor": {
-  "prefix": "endEditor",
-  "body": [
-    "endeditor"
-  ],
-  "description": "end an editor"
-},
-"close editor (should select the editor first)": {
-  "prefix": "closeEditor",
-  "body": [
-    "Close"
-  ],
-  "description": "close editor (should select the editor first)"
-},
-"new line": {
-  "prefix": "newline",
-  "body": [
-    "newline$"
-  ],
-  "description": "new line"
-},
-"save textgrid": {
-  "prefix": "saveTextgrid",
-  "body": [
-    "Save as text file: $0"
-  ],
-  "description": "save textgrid"
-},
-"draw visible sound": {
-  "prefix": "drVisible",
-  "body": [
-    "Draw visible sound: \"no\", \"yes\", 0, 0, \"no\", \"no\", \"no\", \"yes\""
-  ],
-  "description": "draw visible sound"
-},
-"extract selectionHamming": {
-  "prefix": "extractHamming",
-  "body": [
-    "Extract selected sound (windowed): \"slice\", \"Hamming\", 1, \"yes\""
-  ],
-  "description": "extract selectionHamming"
-},
-"writeInfoLine": {
-  "prefix": "writeInfoLine: \"x\"",
-  "body": [],
-  "description": "writeInfoLine"
-},
-"appendInfoLine": {
-  "prefix": "appendInfoLine: newline$, \"x\"",
-  "body": [],
-  "description": "appendInfoLine"
-},
-"save wave": {
-  "prefix": "saveWav",
-  "body": [
-    "Save as WAV file: $0"
-  ],
-  "description": "save wave"
-},
-"annotate (the second pair of quotes define the point tier)": {
-  "prefix": "annotate",
-  "body": [
-    "To TextGrid: \"phoneme word\", \"\""
-  ],
-  "description": "annotate (the second pair of quotes define the point tier)"
-},
-"add button": {
-  "prefix": "addButton",
-  "body": [
-    "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"Usual\", \"\", 1, \"\"",
-    "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"queryFrequency\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/queryFrequency.praat\"",
-    "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"removeAll\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/removeAll.praat\"",
-    "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"quickAnnotate\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/quickAnnotate.praat\"",
-    "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"formantCalc\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/formantCalc.praat\"",
-    "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"test\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/test.praat\""
-  ],
-  "description": "add button"
-},
-"select by object and name": {
-  "prefix": "selectObjectName",
-  "body": [
-    "selectObject: \"Sound chain\""
-  ],
-  "description": "select by object and name"
-},
-"get sound name": {
-  "prefix": "getSoundName",
-  "body": [
-    "thisSound$ = selected$(\"Sound\")"
-  ],
-  "description": "get sound name"
-},
-"get textgrid name": {
-  "prefix": "getTextgridName",
-  "body": [
-    "thisTextgrid$ = selected$(\"TextGrid\")"
-  ],
-  "description": "get textgrid name"
-},
-"get number of selected": {
-  "prefix": "getNumberSelected",
-  "body": [
-    "numberOfSelectedSounds = numberOfSelected ()"
-  ],
-  "description": "get number of selected"
-},
-"convert to string": {
-  "prefix": "toString",
-  "body": [
-    "string$()"
-  ],
-  "description": "convert to string"
-},
-"create a directory": {
-  "prefix": "createDirectory",
-  "body": [
-    "createDirectory: directoryName$"
-  ],
-  "description": "create a directory"
-},
-"delete a file": {
-  "prefix": "deleteFile",
-  "body": [
-    "deleteFile:"
-  ],
-  "description": "delete a file"
-},
-"end with (left = the original string, right = check condition)": {
-  "prefix": "endWith",
-  "body": [
-    "endsWith(a$, b$)"
-  ],
-  "description": "end with (left = the original string, right = check condition)"
-},
-"start with (left = the original string, right = check condition)": {
-  "prefix": "startWith",
-  "body": [
-    "startsWith(a$, b$)"
-  ],
-  "description": "start with (left = the original string, right = check condition)"
-},
-"replace string b = search, c = replace with, n = replacement how many 0 = replace all": {
-  "prefix": "replaceString",
-  "body": [
-    "replace$(a$, b$, c$, n)"
-  ],
-  "description": "replace string b = search, c = replace with, n = replacement how many 0 = replace all"
-},
-"get string length": {
-  "prefix": "lengthString",
-  "body": [
-    "length(a$)"
-  ],
-  "description": "get string length"
-},
-"slice a string from left n = how many characters": {
-  "prefix": "sliceLeft",
-  "body": [
-    "left$(a$, n)"
-  ],
-  "description": "slice a string from left n = how many characters"
-},
-"slice a string from right n = how many characters": {
-  "prefix": "sliceRight",
-  "body": [
-    "left$(a$, n)"
-  ],
-  "description": "slice a string from right n = how many characters"
-},
-"index of the first occurrence from the left": {
-  "prefix": "indexLeft",
-  "body": [
-    "index(a$, b$)"
-  ],
-  "description": "index of the first occurrence from the left"
-},
-"index of the first occurrence from the right": {
-  "prefix": "indexRight",
-  "body": [
-    "rindex(a$, b$)"
-  ],
-  "description": "index of the first occurrence from the right"
-},
-"index of the first regex occurrence from the left": {
-  "prefix": "indexRegex",
-  "body": [
-    "index_regex (a$, b$)"
-  ],
-  "description": "index of the first regex occurrence from the left"
-},
-"index of the first regex occurrence from the left": {
-  "prefix": "rindexRegex",
-  "body": [
-    "rindex_regex (a$, b$)"
-  ],
-  "description": "index of the first regex occurrence from the left"
-},
-"replace regex, b = search, c = replace with, n = replacement how many 0 = replace all": {
-  "prefix": "replaceRegex",
-  "body": [
-    "replace_regex$ (a$, b$, c$, n)"
-  ],
-  "description": "replace regex, b = search, c = replace with, n = replacement how many 0 = replace all"
-},
-"print preference direcotory": {
-  "prefix": "pref",
-  "body": [
-    "writeInfoLine: preferencesDirectory$"
-  ],
-  "description": "print preference direcotory"
-},
-"remove all files corresponding to a certain condition": {
-  "prefix": "removeCond",
-  "body": [
-    "select all",
-    "sounds# = selected# (\"Sound\")",
-    "writeInfoLine: size (sounds#)",
-    "for i to size (sounds#)",
-    "    selectObject: sounds# [i]",
-    "    name$ = selected$ (\"Sound\")",
-    "    if name$ = \"chain\"",
-    "      Remove",
-    "    endif",
-    "endfor"
-  ],
-  "description": "remove all files corresponding to a certain condition"
-},
-"mark bottom": {
-  "prefix": "Marks bottom every: 1, 1000, \"yes\", \"yes\", \"yes\"",
-  "body": [],
-  "description": "mark bottom"
-},
-"draw fft": {
-  "prefix": "Draw: 0, 5000, 0, 60, \"yes\"",
-  "body": [],
-  "description": "draw fft"
-},
-"legend": {
-  "prefix": "Text top: \"yes\", \"text\"",
-  "body": [],
-  "description": "legend"
-},
-"get sound start": {
-  "prefix": "Get start time",
-  "body": [],
-  "description": "get sound start"
-},
-"get sound end": {
-  "prefix": "Get end time",
-  "body": [],
-  "description": "get sound end"
-},
-"get start selection": {
-  "prefix": "Get start of selection",
-  "body": [],
-  "description": "get start selection"
-},
-"get end selection": {
-  "prefix": "Get end of selection",
-  "body": [],
-  "description": "get end selection"
-},
-"get number of intervals": {
-  "prefix": "numberOfPhonemes = Get number of intervals: 1",
-  "body": [],
-  "description": "get number of intervals"
-},
-"get label 3 = interval index": {
-  "prefix": "thisPhoneme$ = Get label of interval: 1, 3",
-  "body": [],
-  "description": "get label 3 = interval index"
-},
-"get interval index at time": {
-  "prefix": "thisWordIntervalIndex = Get interval at time: 1, time",
-  "body": [],
-  "description": "get interval index at time"
-},
-"loop through each interval": {
-  "prefix": "numberOfPhonemes = Get number of intervals: 1",
-  "body": [
-    "for thisInterval from 1 to numberOfPhonemes",
-    "    select TextGrid 'thisTextGrid$'",
-    "    thisPhoneme$ = Get label of interval: 1, thisInterval",
-    "endfor"
-  ],
-  "description": "loop through each interval"
-},
-"get interval start": {
-  "prefix": "thisPhonemeStartTime = Get start point: 1, thisInterval",
-  "body": [],
-  "description": "get interval start"
-},
-"get interval end": {
-  "prefix": "thisPhonemeEndTime   = Get end point: 1, thisInterval",
-  "body": [],
-  "description": "get interval end"
-},
-"get interval duration": {
-  "prefix": "duration = thisPhonemeEndTime - thisPhonemeStartTime",
-  "body": [],
-  "description": "get interval duration"
-},
-"get mid point": {
-  "prefix": "midpoint = thisPhonemeStartTime + duration/2",
-  "body": [],
-  "description": "get mid point"
-},
-"to formant": {
-  "prefix": "To Formant (burg)... 0 5 5000 0.025 50",
-  "body": [],
-  "description": "to formant"
-},
-"extract formant": {
-  "prefix": "select Formant 'thisSound$'",
-  "body": [
-    "f1 = Get value at time... 1 midpoint Hertz Linear",
-    "f2 = Get value at time... 2 midpoint Hertz Linear",
-    "f3 = Get value at time... 3 midpoint Hertz Linear"
-  ],
-  "description": "extract formant"
-},
-"write column names to a file": {
-  "prefix": "writeFile",
-  "body": [
-    "writeFileLine: outputPath$, \"a,b,c\""
-  ],
-  "description": "write column names to a file"
-},
-"append to a file, the comma separates columns": {
-  "prefix": "appendFile",
-  "body": [
-    "appendFileLine: outputPath$, \"a\",\",\",\"b\",\",\",variable"
-  ],
-  "description": "append to a file, the comma separates columns"
-},
-"if": {
-  "prefix": "if",
-  "body": [
-    "if $1",
-    "  $0",
-    "endif"
-  ],
-  "description": "if"
-},
-"while": {
-  "prefix": "while",
-  "body": [
-    "while $1",
-    "  $0",
-    "endwhile"
-  ],
-  "description": "while"
-},
-"for": {
-  "prefix": "for",
-  "body": [
-    "for $1",
-    "  $0",
-    "endfor"
-  ],
-  "description": "for"
+{
+  "create an edit window": {
+    "prefix": "edit",
+    "body": [
+      "Edit"
+    ],
+    "description": "create an edit window"
+  },
+  "enter an edit window type + name": {
+    "prefix": "enterEdit",
+    "body": [
+      "editor: \"$1 $2\""
+    ],
+    "description": "enter an edit window type + name"
+  },
+  "zoom": {
+    "prefix": "zoom",
+    "body": [
+      "Zoom in"
+    ],
+    "description": "zoom"
+  },
+  "end an editor": {
+    "prefix": "endEditor",
+    "body": [
+      "endeditor"
+    ],
+    "description": "end an editor"
+  },
+  "close editor (should select the editor first)": {
+    "prefix": "closeEditor",
+    "body": [
+      "Close"
+    ],
+    "description": "close editor (should select the editor first)"
+  },
+  "new line": {
+    "prefix": "newline",
+    "body": [
+      "newline$"
+    ],
+    "description": "new line"
+  },
+  "save textgrid": {
+    "prefix": "saveTextgrid",
+    "body": [
+      "Save as text file: $0"
+    ],
+    "description": "save textgrid"
+  },
+  "draw visible sound": {
+    "prefix": "drVisible",
+    "body": [
+      "Draw visible sound: \"no\", \"yes\", 0, 0, \"no\", \"no\", \"no\", \"yes\""
+    ],
+    "description": "draw visible sound"
+  },
+  "extract selectionHamming": {
+    "prefix": "extractHamming",
+    "body": [
+      "Extract selected sound (windowed): \"slice\", \"Hamming\", 1, \"yes\""
+    ],
+    "description": "extract selectionHamming"
+  },
+  "writeInfoLine": {
+    "prefix": "writeInfoLine: \"x\"",
+    "body": [],
+    "description": "writeInfoLine"
+  },
+  "appendInfoLine": {
+    "prefix": "appendInfoLine: newline$, \"x\"",
+    "body": [],
+    "description": "appendInfoLine"
+  },
+  "save wave": {
+    "prefix": "saveWav",
+    "body": [
+      "Save as WAV file: $0"
+    ],
+    "description": "save wave"
+  },
+  "annotate (the second pair of quotes define the point tier)": {
+    "prefix": "annotate",
+    "body": [
+      "To TextGrid: \"phoneme word\", \"\""
+    ],
+    "description": "annotate (the second pair of quotes define the point tier)"
+  },
+  "add button": {
+    "prefix": "addButton",
+    "body": [
+      "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"Usual\", \"\", 1, \"\"",
+      "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"queryFrequency\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/queryFrequency.praat\"",
+      "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"removeAll\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/removeAll.praat\"",
+      "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"quickAnnotate\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/quickAnnotate.praat\"",
+      "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"formantCalc\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/formantCalc.praat\"",
+      "Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"test\", \"Usual\", 1, \"/Users/rosingle/Desktop/praatscript/test.praat\""
+    ],
+    "description": "add button"
+  },
+  "select by object and name": {
+    "prefix": "selectObjectName",
+    "body": [
+      "selectObject: \"Sound chain\""
+    ],
+    "description": "select by object and name"
+  },
+  "get sound name": {
+    "prefix": "getSoundName",
+    "body": [
+      "thisSound$ = selected$(\"Sound\")"
+    ],
+    "description": "get sound name"
+  },
+  "get textgrid name": {
+    "prefix": "getTextgridName",
+    "body": [
+      "thisTextgrid$ = selected$(\"TextGrid\")"
+    ],
+    "description": "get textgrid name"
+  },
+  "get number of selected": {
+    "prefix": "getNumberSelected",
+    "body": [
+      "numberOfSelectedSounds = numberOfSelected ()"
+    ],
+    "description": "get number of selected"
+  },
+  "convert to string": {
+    "prefix": "toString",
+    "body": [
+      "string$()"
+    ],
+    "description": "convert to string"
+  },
+  "create a directory": {
+    "prefix": "createDirectory",
+    "body": [
+      "createDirectory: directoryName$"
+    ],
+    "description": "create a directory"
+  },
+  "delete a file": {
+    "prefix": "deleteFile",
+    "body": [
+      "deleteFile:"
+    ],
+    "description": "delete a file"
+  },
+  "end with (left = the original string, right = check condition)": {
+    "prefix": "endWith",
+    "body": [
+      "endsWith(a$, b$)"
+    ],
+    "description": "end with (left = the original string, right = check condition)"
+  },
+  "start with (left = the original string, right = check condition)": {
+    "prefix": "startWith",
+    "body": [
+      "startsWith(a$, b$)"
+    ],
+    "description": "start with (left = the original string, right = check condition)"
+  },
+  "replace string b = search, c = replace with, n = replacement how many 0 = replace all": {
+    "prefix": "replaceString",
+    "body": [
+      "replace$(a$, b$, c$, n)"
+    ],
+    "description": "replace string b = search, c = replace with, n = replacement how many 0 = replace all"
+  },
+  "get string length": {
+    "prefix": "lengthString",
+    "body": [
+      "length(a$)"
+    ],
+    "description": "get string length"
+  },
+  "slice a string from left n = how many characters": {
+    "prefix": "sliceLeft",
+    "body": [
+      "left$(a$, n)"
+    ],
+    "description": "slice a string from left n = how many characters"
+  },
+  "slice a string from right n = how many characters": {
+    "prefix": "sliceRight",
+    "body": [
+      "left$(a$, n)"
+    ],
+    "description": "slice a string from right n = how many characters"
+  },
+  "index of the first occurrence from the left": {
+    "prefix": "indexLeft",
+    "body": [
+      "index(a$, b$)"
+    ],
+    "description": "index of the first occurrence from the left"
+  },
+  "index of the first occurrence from the right": {
+    "prefix": "indexRight",
+    "body": [
+      "rindex(a$, b$)"
+    ],
+    "description": "index of the first occurrence from the right"
+  },
+  "index of the first regex occurrence from the left": {
+    "prefix": "indexRegex",
+    "body": [
+      "index_regex (a$, b$)"
+    ],
+    "description": "index of the first regex occurrence from the left"
+  },
+  "index of the first regex occurrence from the right": {
+    "prefix": "rindexRegex",
+    "body": [
+      "rindex_regex (a$, b$)"
+    ],
+    "description": "index of the first regex occurrence from the left"
+  },
+  "replace regex, b = search, c = replace with, n = replacement how many 0 = replace all": {
+    "prefix": "replaceRegex",
+    "body": [
+      "replace_regex$ (a$, b$, c$, n)"
+    ],
+    "description": "replace regex, b = search, c = replace with, n = replacement how many 0 = replace all"
+  },
+  "print preference direcotory": {
+    "prefix": "pref",
+    "body": [
+      "writeInfoLine: preferencesDirectory$"
+    ],
+    "description": "print preference direcotory"
+  },
+  "remove all files corresponding to a certain condition": {
+    "prefix": "removeCond",
+    "body": [
+      "select all",
+      "sounds# = selected# (\"Sound\")",
+      "writeInfoLine: size (sounds#)",
+      "for i to size (sounds#)",
+      "    selectObject: sounds# [i]",
+      "    name$ = selected$ (\"Sound\")",
+      "    if name$ = \"chain\"",
+      "      Remove",
+      "    endif",
+      "endfor"
+    ],
+    "description": "remove all files corresponding to a certain condition"
+  },
+  "mark bottom": {
+    "prefix": "Marks bottom every: 1, 1000, \"yes\", \"yes\", \"yes\"",
+    "body": [],
+    "description": "mark bottom"
+  },
+  "draw fft": {
+    "prefix": "Draw: 0, 5000, 0, 60, \"yes\"",
+    "body": [],
+    "description": "draw fft"
+  },
+  "legend": {
+    "prefix": "Text top: \"yes\", \"text\"",
+    "body": [],
+    "description": "legend"
+  },
+  "get sound start": {
+    "prefix": "Get start time",
+    "body": [],
+    "description": "get sound start"
+  },
+  "get sound end": {
+    "prefix": "Get end time",
+    "body": [],
+    "description": "get sound end"
+  },
+  "get start selection": {
+    "prefix": "Get start of selection",
+    "body": [],
+    "description": "get start selection"
+  },
+  "get end selection": {
+    "prefix": "Get end of selection",
+    "body": [],
+    "description": "get end selection"
+  },
+  "get number of intervals": {
+    "prefix": "numberOfPhonemes = Get number of intervals: 1",
+    "body": [],
+    "description": "get number of intervals"
+  },
+  "get label 3 = interval index": {
+    "prefix": "thisPhoneme$ = Get label of interval: 1, 3",
+    "body": [],
+    "description": "get label 3 = interval index"
+  },
+  "get interval index at time": {
+    "prefix": "thisWordIntervalIndex = Get interval at time: 1, time",
+    "body": [],
+    "description": "get interval index at time"
+  },
+  "loop through each interval": {
+    "prefix": "numberOfPhonemes = Get number of intervals: 1",
+    "body": [
+      "for thisInterval from 1 to numberOfPhonemes",
+      "    select TextGrid 'thisTextGrid$'",
+      "    thisPhoneme$ = Get label of interval: 1, thisInterval",
+      "endfor"
+    ],
+    "description": "loop through each interval"
+  },
+  "get interval start": {
+    "prefix": "thisPhonemeStartTime = Get start point: 1, thisInterval",
+    "body": [],
+    "description": "get interval start"
+  },
+  "get interval end": {
+    "prefix": "thisPhonemeEndTime   = Get end point: 1, thisInterval",
+    "body": [],
+    "description": "get interval end"
+  },
+  "get interval duration": {
+    "prefix": "duration = thisPhonemeEndTime - thisPhonemeStartTime",
+    "body": [],
+    "description": "get interval duration"
+  },
+  "get mid point": {
+    "prefix": "midpoint = thisPhonemeStartTime + duration/2",
+    "body": [],
+    "description": "get mid point"
+  },
+  "to formant": {
+    "prefix": "To Formant (burg)... 0 5 5000 0.025 50",
+    "body": [],
+    "description": "to formant"
+  },
+  "extract formant": {
+    "prefix": "select Formant 'thisSound$'",
+    "body": [
+      "f1 = Get value at time... 1 midpoint Hertz Linear",
+      "f2 = Get value at time... 2 midpoint Hertz Linear",
+      "f3 = Get value at time... 3 midpoint Hertz Linear"
+    ],
+    "description": "extract formant"
+  },
+  "write column names to a file": {
+    "prefix": "writeFile",
+    "body": [
+      "writeFileLine: outputPath$, \"a,b,c\""
+    ],
+    "description": "write column names to a file"
+  },
+  "append to a file, the comma separates columns": {
+    "prefix": "appendFile",
+    "body": [
+      "appendFileLine: outputPath$, \"a\",\",\",\"b\",\",\",variable"
+    ],
+    "description": "append to a file, the comma separates columns"
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if $1",
+      "  $0",
+      "endif"
+    ],
+    "description": "if"
+  },
+  "while": {
+    "prefix": "while",
+    "body": [
+      "while $1",
+      "  $0",
+      "endwhile"
+    ],
+    "description": "while"
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for $1",
+      "  $0",
+      "endfor"
+    ],
+    "description": "for"
+  }
 }
