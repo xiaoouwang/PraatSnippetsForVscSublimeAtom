@@ -15,7 +15,7 @@ endeditor
 close
 Close
 # move cursor to
-moveCursor
+moveCursorTo
 Move cursor to: $1:valueInSecond
 # move cursor by
 moveCursorBy
