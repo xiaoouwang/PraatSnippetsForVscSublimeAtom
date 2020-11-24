@@ -19,7 +19,9 @@ Show us some support here ! :)
 
 Go to https://xiaoouwang.github.io/batch_snippets_generator_converter_for_Vsc_Sublime_Atom/, input the praat code in the stated format and click convert.
 
-Then you can create pull request on my github or send me an email to add snippets if you are not familiar with open source contribution. My email is xiaoouwangfrance@gmail.com
+Then you can create pull request on my github or send me an email to add snippets if you are not familiar with open source contribution.
+
+My email is xiaoouwangfrance@gmail.com
 
 Also check https://github.com/xingyuliuNLP/snippetsConvertMaster for advanced snippets generation (things like $1:suggestion) if you have some basic python experience.
 
