@@ -1,0 +1,2 @@
+endeditor
+Get sampling frequency

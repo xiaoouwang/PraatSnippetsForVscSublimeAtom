@@ -1,0 +1,2 @@
+subject,phoneme,mean,median,min,max
+subject,phoneme,mean,median,min,max

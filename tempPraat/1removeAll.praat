@@ -1,0 +1,3 @@
+endeditor
+select all
+Remove

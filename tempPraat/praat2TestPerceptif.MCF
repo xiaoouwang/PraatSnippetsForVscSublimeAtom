@@ -1,0 +1,51 @@
+"ooTextFile"
+"ExperimentMFC 7"
+blankWhilePlaying? <no>
+stimuliAreSounds? <yes>
+stimulusFileNameHead = "Sounds/"
+stimulusFileNameTail = ".wav"
+stimulusCarrierBefore = "dites"
+stimulusCarrierAfter = "encore"
+stimulusInitialSilenceDuration = 0.5 seconds
+stimulusMedialSilenceDuration = 0
+stimulusFinalSilenceDuration = 0.5 seconds
+numberOfDifferentStimuli = 4
+    "heed" ""
+    "hid" ""
+    "hood" ""
+    "hud" ""
+numberOfReplicationsPerStimulus = 3
+breakAfterEvery = 0
+randomize = <PermuteBalancedNoDoublets>
+startText = "This is a listening experiment.
+After hearing a sound, choose the vowel that is most similar to what you heard.
+
+Click to start."
+runText = "Choisissez le son le plus proche."
+pauseText = "You can have a short break if you like. Click to proceed."
+endText = "The experiment has finished."
+maximumNumberOfReplays = 0
+replayButton = 0 0 0 0 "" ""
+okButton = 0 0 0 0 "" ""
+oopsButton = 0 0 0 0 "" ""
+responsesAreSounds? <no> "" "" "" "" 0 0 0
+numberOfDifferentResponses = 13
+    0.1 0.3 0.8 0.9 "/i/ (pie)" 40 "" "i"
+    0.1 0.3 0.6 0.7 "/a/ (pas)" 40 "" "e"
+    0.1 0.3 0.4 0.5 "/u/ (pou)" 40 "" "a"
+    0.1 0.3 0.2 0.3 "/y/ (pu)" 40 "" "o"
+    0.4 0.6 0.8 0.9 "/e/ (pépé)" 40 "" "u"
+	0.4 0.6 0.6 0.7 "/ɛ/ (paix)" 40 "" "a"
+    0.4 0.6 0.4 0.5 "/ø/ (peu)" 40 "" "b"
+    0.4 0.6 0.2 0.3 "/œ/ (peur)" 40 "" "c"
+	0.7 0.9 0.8 0.9 "/o/ (peau)" 40 "" "d"
+    0.7 0.9 0.6 0.7 "/ɔ/ (porc)" 40 "" "f"
+	0.7 0.9 0.4 0.5 "/ɛ̃/ (pain)" 40 "" "g"
+	0.7 0.9 0.3 0.4 "/ɑ̃/ (pan)" 40 "" "h"
+    0.7 0.9 0.2 0.3 "/ɔ̃/ (pont)" 40 "" "j"
+numberOfGoodnessCategories = 0
+    0.25 0.35 0.10 0.20 "1 (poor)" 24 ""
+    0.35 0.45 0.10 0.20 "2" 24 ""
+    0.45 0.55 0.10 0.20 "3" 24 ""
+    0.55 0.65 0.10 0.20 "4" 24 ""
+    0.65 0.75 0.10 0.20 "5 (good)" 24 ""
