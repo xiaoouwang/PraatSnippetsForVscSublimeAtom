@@ -1,4 +1,4 @@
-# PraatSnippetsForVscSublimeAtom
+# Praat Snippets For Vsc&Sublime&Atom
 
 Praat snippets for vsc(visual studio code), atom and sublime text.
 
