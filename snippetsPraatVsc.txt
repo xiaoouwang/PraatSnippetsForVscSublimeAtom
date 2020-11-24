@@ -1,189 +1,147 @@
 {
-"create an edit window": {
-	"prefix": "edit",
+"write (overwrite)": {
+	"prefix": "print",
 	"body": [
-		"Edit",
+		"writeInfoLine: $0",
 	],
-	"description": "create an edit window"
+	"description": "write (overwrite)"
 },
-"enter an edit window": {
-	"prefix": "enterEdit",
+"write (overwrite)": {
+	"prefix": "write",
 	"body": [
-		"editor: \"${1:type} ${2:name}\"",
+		"writeInfoLine: $0",
 	],
-	"description": "enter an edit window"
+	"description": "write (overwrite)"
 },
-"zoom": {
-	"prefix": "zoom",
+"write (new line)": {
+	"prefix": "println",
 	"body": [
-		"Zoom in",
+		"appendInfoLine: $0",
 	],
-	"description": "zoom"
+	"description": "write (new line)"
 },
-"end an editor": {
-	"prefix": "endEditor",
+"write (new line)": {
+	"prefix": "append",
 	"body": [
-		"endeditor",
+		"appendInfoLine: $0",
 	],
-	"description": "end an editor"
+	"description": "write (new line)"
 },
-"close an editor": {
-	"prefix": "close",
+"clear information": {
+	"prefix": "clear",
 	"body": [
-		"Close",
+		"clearinfo",
 	],
-	"description": "close an editor"
+	"description": "clear information"
 },
-"move cursor to": {
-	"prefix": "moveCursor",
+"output the info window": {
+	"prefix": "printInfoWindow",
 	"body": [
-		"Move cursor to: ${1:valueInSecond}",
-	],
-	"description": "move cursor to"
-},
-"move cursor by": {
-	"prefix": "moveCursorBy",
-	"body": [
-		"Move end of seletion by: ${2:valueInSecond}",
-	],
-	"description": "move cursor by"
-},
-"zoom selection": {
-	"prefix": "zoomSelection",
-	"body": [
-		"Zoom to selection",
-	],
-	"description": "zoom selection"
-},
-"extract selection": {
-	"prefix": "extractSelection",
-	"body": [
-		"Extract selected sound (time from 0)",
-	],
-	"description": "extract selection"
-},
-"play the editor": {
-	"prefix": "playEditor",
-	"body": [
-		"Play window",
-	],
-	"description": "play the editor"
-},
-"draw visible sound": {
-	"prefix": "drVisible",
-	"body": [
-		"Draw visible sound: \"no\", \"yes\", 0, 0, \"no\", \"no\", \"no\", \"yes\"",
-	],
-	"description": "draw visible sound"
-},
-"extract selectionHamming": {
-	"prefix": "extractHamming",
-	"body": [
-		"Extract selected sound (windowed:) \"slice\", \"Hamming\", 1, \"yes### file and directory operations beginning",
-	],
-	"description": "extract selectionHamming"
-},
-"read a file": {
-	"prefix": "readFile",
-	"body": [
-		"Read from file: \"$1\"",
-	],
-	"description": "read a file"
-},
-"read long file": {
-	"prefix": "readLongFile",
-	"body": [
-		"Open long sound file: \"$1\"",
-	],
-	"description": "read long file"
-},
-"save wav file": {
-	"prefix": "saveWav",
-	"body": [
-		"Save as WAV file: \"$1\"",
-	],
-	"description": "save wav file"
-},
-"save txt file (textgrid too)": {
-	"prefix": "saveTxt",
-	"body": [
-		"Save as text file: \"$1\"",
-	],
-	"description": "save txt file (textgrid too)"
-},
-"remove a file": {
-	"prefix": "remove",
-	"body": [
-		"Remove",
-	],
-	"description": "remove a file"
-},
-"play a sound": {
-	"prefix": "play",
-	"body": [
-		"Play",
-	],
-	"description": "play a sound"
-},
-"play a pitch": {
-	"prefix": "playPitch",
-	"body": [
-		"Hum",
-	],
-	"description": "play a pitch"
-},
-"create directory": {
-	"prefix": "createDirectory",
-	"body": [
-		"createDirectory: \"${1:directoryPath}\"",
-	],
-	"description": "create directory"
-},
-"delete file": {
-	"prefix": "deleteFile",
-	"body": [
-		"deleteFile: ${1:filePath}",
-	],
-	"description": "delete file"
-},
-"check file existence and readability": {
-	"prefix": "checkFile",
-	"body": [
-		"fileReadable ($1)",
+		"appendFile: \"${1:outputFilePath}\", ($info)",
 		"$0",
 	],
-	"description": "check file existence and readability"
+	"description": "output the info window"
 },
-"write line to file": {
-	"prefix": "writeLineToFile",
+"create a form": {
+	"prefix": "crForm",
 	"body": [
-		"writeFileLine: \"${1:filePath}\", ${2:content}",
-		"$0",
+		"form $1",
+		"  $0",
+		"endform",
 	],
-	"description": "write line to file"
+	"description": "create a form"
 },
-"append line to file, no need to have the file prexisting": {
-	"prefix": "appendLine",
+"convert to string": {
+	"prefix": "toString",
 	"body": [
-		"appendFileLine: \"${1:filePath}\", ${2:content}",
-		"$0### formulas beginning",
+		"($string0)",
 	],
-	"description": "append line to file, no need to have the file prexisting"
+	"description": "convert to string"
 },
-"round number to zero": {
-	"prefix": "round",
+"convert to number": {
+	"prefix": "toNumber",
 	"body": [
-		"(${r:ound1number})",
+		"($number0)",
 	],
-	"description": "round number to zero"
+	"description": "convert to number"
 },
-"round number to decimal precision": {
-	"prefix": "roundPrecision",
+"check file exists": {
+	"prefix": "exist1",
 	"body": [
-		"(${n:umberfixed1number21precision}),",
-		"$0### graphics beginning",
+		"fileReadable: ($0)",
 	],
-	"description": "round number to decimal precision"
+	"description": "check file exists"
+},
+"get object type": {
+	"prefix": "getType",
+	"body": [
+		"type$ = extractWord$ (${1:fullname}, \"$0\")",
+	],
+	"description": "get object type"
+},
+"get object name": {
+	"prefix": "getName",
+	"body": [
+		"name$ = extractLine$ (${1:fullname}, \"${0:space}\")",
+	],
+	"description": "get object name"
+},
+"get object numbers sound or others": {
+	"prefix": "getNumberSelected",
+	"body": [
+		"nb = (\"numberOfSelectedSound\")",
+	],
+	"description": "get object numbers sound or others"
+},
+"home": {
+	"prefix": "home",
+	"body": [
+		"homeDirectory$",
+	],
+	"description": "home"
+},
+"undefined": {
+	"prefix": "und",
+	"body": [
+		"undefined",
+	],
+	"description": "undefined"
+},
+"exit": {
+	"prefix": "exit",
+	"body": [
+		"exit ${0:message}",
+	],
+	"description": "exit"
+},
+"replace interval": {
+	"prefix": "replaceInterval",
+	"body": [
+		"Replace interval texts: 1, 1, 0, \"a\", \"sound\", \"Literals\" # 10, = all the intervals",
+	],
+	"description": "replace interval"
+},
+"concatenate": {
+	"prefix": "concat",
+	"body": [
+		"Concatenate",
+	],
+	"description": "concatenate"
+},
+"select all": {
+	"prefix": "selectAll",
+	"body": [
+		"select all",
+	],
+	"description": "select all"
+},
+"get start of selection": {
+	"prefix": "getStartSelec",
+	"body": [
+		"Get start of selection",
+		"",
+	],
+	"description": "get start of selection"
 },
 "erase the whole graphics": {
 	"prefix": "eraseGraph",
@@ -259,73 +217,142 @@
 "set color": {
 	"prefix": "color",
 	"body": [
-		"${1:Red###} information beginning",
+		"${1:Red}",
 	],
 	"description": "set color"
 },
-"write information in new line": {
-	"prefix": "writeLine",
+"create an edit window": {
+	"prefix": "edit",
 	"body": [
-		"writeInfoLine: ${1:multipleInfoSeperatedByComma}",
-		"$0",
+		"Edit",
 	],
-	"description": "write information in new line"
+	"description": "create an edit window"
 },
-"append information in new line": {
-	"prefix": "appendLine",
+"enter an edit window": {
+	"prefix": "selectEditor",
 	"body": [
-		"appendInfoLine: ${1:multipleInfoSeperatedByComma}",
-		"$0",
+		"editor: \"${1:type} ${0:name}\"",
 	],
-	"description": "append information in new line"
+	"description": "enter an edit window"
 },
-"clear information": {
-	"prefix": "clear",
+"zoom": {
+	"prefix": "zoom",
 	"body": [
-		"clearinfo",
+		"Zoom in",
 	],
-	"description": "clear information"
+	"description": "zoom"
 },
-"output the info window": {
-	"prefix": "printInfoWindow",
+"end an editor": {
+	"prefix": "endEditor",
 	"body": [
-		"appendFile: \"${1:outputFilePath}\", ($info)",
-		"$0",
+		"endeditor",
 	],
-	"description": "output the info window"
+	"description": "end an editor"
 },
-"allow user to choose directory": {
-	"prefix": "chooseDirectory",
+"close an editor": {
+	"prefix": "close",
 	"body": [
-		"chooseDirectory$: \"${1:chooseTheDirectoryContainingSound}\"",
+		"Close",
 	],
-	"description": "allow user to choose directory"
+	"description": "close an editor"
 },
-"allow user to choose file to open": {
-	"prefix": "chooseFile",
+"move cursor to": {
+	"prefix": "moveCursorTo",
 	"body": [
-		"chooseReadFile$: \"${1:open} a file\"",
+		"Move cursor to: ${1:valueInSecond}",
 	],
-	"description": "allow user to choose file to open"
+	"description": "move cursor to"
 },
-"create a form": {
-	"prefix": "form",
+"move cursor by": {
+	"prefix": "moveCursorBy",
 	"body": [
-		"form $1",
-		"  $2",
-		"endform### others beginning",
+		"Move end of seletion by: ${2:valueInSecond}",
 	],
-	"description": "create a form"
+	"description": "move cursor by"
 },
-"create a form": {
-	"prefix": "form",
+"zoom selection": {
+	"prefix": "zoomSelection",
 	"body": [
-		"form $1",
-		"  $2",
-		"endform",
-		"$0",
+		"Zoom to selection",
 	],
-	"description": "create a form"
+	"description": "zoom selection"
+},
+"extract selection": {
+	"prefix": "extractSelection",
+	"body": [
+		"Extract selected sound (time from 0)",
+	],
+	"description": "extract selection"
+},
+"play the editor": {
+	"prefix": "playEditor",
+	"body": [
+		"Play window",
+	],
+	"description": "play the editor"
+},
+"draw visible sound": {
+	"prefix": "drVisible",
+	"body": [
+		"Draw visible sound: \"no\", \"yes\", 0, 0, \"no\", \"no\", \"no\", \"yes\"",
+	],
+	"description": "draw visible sound"
+},
+"extract selectionHamming": {
+	"prefix": "extractHamming",
+	"body": [
+		"Extract selected sound (windowed:) \"slice\", \"Hamming\", 1, \"yes\"",
+	],
+	"description": "extract selectionHamming"
+},
+"select next interval": {
+	"prefix": "selectNextInterval",
+	"body": [
+		"Select next interval",
+	],
+	"description": "select next interval"
+},
+"to spectrum": {
+	"prefix": "toSpectrum",
+	"body": [
+		"To Spectrum: \"no\"",
+	],
+	"description": "to spectrum"
+},
+"get sampling freq": {
+	"prefix": "getSampling",
+	"body": [
+		"Get sampling frequency",
+	],
+	"description": "get sampling freq"
+},
+"mac": {
+	"prefix": "mac",
+	"body": [
+		"macintosh",
+	],
+	"description": "mac"
+},
+"windows": {
+	"prefix": "windows",
+	"body": [
+		"windows",
+	],
+	"description": "windows"
+},
+"unix": {
+	"prefix": "unix",
+	"body": [
+		"unix",
+	],
+	"description": "unix"
+},
+"unix": {
+	"prefix": "linux",
+	"body": [
+		"unix",
+	],
+	"description": "unix"
 },
 "tab character": {
 	"prefix": "tab",
@@ -341,21 +368,96 @@
 	],
 	"description": "newline character"
 },
-"select an object": {
-	"prefix": "selObject",
+"select a variable": {
+	"prefix": "select",
 	"body": [
-		"selectObject: $1",
-		"$0",
+		"selectObject: $0",
+	],
+	"description": "select a variable"
+},
+"minus a variable": {
+	"prefix": "minus",
+	"body": [
+		"minusObject: $0",
+	],
+	"description": "minus a variable"
+},
+"plus a variable": {
+	"prefix": "plusObject",
+	"body": [
+		"plusObject: $0",
+	],
+	"description": "plus a variable"
+},
+"select a spectrum": {
+	"prefix": "selectSpectrum",
+	"body": [
+		"selectObject: \"Spectrum $0\"",
+	],
+	"description": "select a spectrum"
+},
+"minus a spectrum": {
+	"prefix": "minusSpectrum",
+	"body": [
+		"minusObject: \"Spectrum $0\"",
+	],
+	"description": "minus a spectrum"
+},
+"plus a spectrum": {
+	"prefix": "plusSpectrum",
+	"body": [
+		"plusObject: \"Spectrum $0\"",
+	],
+	"description": "plus a spectrum"
+},
+"select a TextGrid": {
+	"prefix": "selectTextGrid",
+	"body": [
+		"selectObject: \"TextGrid $0\"",
+	],
+	"description": "select a TextGrid"
+},
+"minus a spectrum": {
+	"prefix": "minusTextGrid",
+	"body": [
+		"minusObject: \"TextGrid $0\"",
+	],
+	"description": "minus a spectrum"
+},
+"plus a spectrum": {
+	"prefix": "plusTextGrid",
+	"body": [
+		"plusObject: \"TextGrid $0\"",
+	],
+	"description": "plus a spectrum"
+},
+"select an object": {
+	"prefix": "selectSound",
+	"body": [
+		"selectObject: \"Sound $0\"",
 	],
 	"description": "select an object"
+},
+"minus an object": {
+	"prefix": "minusSound",
+	"body": [
+		"minusObject: \"Sound $0\"",
+	],
+	"description": "minus an object"
+},
+"plus an object": {
+	"prefix": "plusSound",
+	"body": [
+		"plusObject: \"Sound $0\"",
+	],
+	"description": "plus an object"
 },
 "for loop": {
 	"prefix": "for",
 	"body": [
 		"for i from 1 to $1",
-		"  ${1:doSomething}",
+		"  ${0:doSomething}",
 		"endfor",
-		"$0",
 	],
 	"description": "for loop"
 },
@@ -372,10 +474,9 @@
 "if": {
 	"prefix": "if",
 	"body": [
-		"if",
-		"  $1",
+		"if $1",
+		"  $0",
 		"endif",
-		"$0",
 	],
 	"description": "if"
 },
@@ -387,9 +488,88 @@
 		"elsif $3",
 		"  $4",
 		"endif",
-		"$0### object creation beginning",
+		"$0",
 	],
 	"description": "if else"
+},
+"if exist": {
+	"prefix": "ifexist",
+	"body": [
+		"if $1 <> \"\"",
+		"  $0",
+		"endif",
+	],
+	"description": "if exist"
+},
+"tokens": {
+	"prefix": "crTokens",
+	"body": [
+		"Create Strings as tokens: $1, \"${0:space}\"",
+	],
+	"description": "tokens"
+},
+"exist2": {
+	"prefix": "exist2",
+	"body": [
+		"$0 <> \"\"",
+	],
+	"description": "exist2"
+},
+"safe remove end": {
+	"prefix": "safeRemoveEnd",
+	"body": [
+		"@ids.final",
+	],
+	"description": "safe remove end"
+},
+"safe remove start": {
+	"prefix": "safeRemoveStart",
+	"body": [
+		"@ids",
+		"initialSelections$ = ids.ids$",
+	],
+	"description": "safe remove start"
+},
+"safe remove proc": {
+	"prefix": "safeRemoveProc",
+	"body": [
+		"procedure ids.final",
+		"@ids",
+		"finalSelections$ = ids.ids$",
+		"wangIds = Create Strings as tokens: finalSelections$ , \"${0:space}\"",
+		"nbOfStr = Get number of strings",
+		"for i from 1 to nbOfStr",
+		"  select wangIds",
+		"  id = Get string: i",
+		"  if index (initialSelections$ , string$ (id) ) = 0",
+		"  selectObject: id",
+		"  Remove",
+		"  endif",
+		"endfor",
+		"removeObject: wangIds",
+		"endproc",
+		"",
+		"procedure ids",
+		"  endeditor",
+		"  select all",
+		"  textgrids# = selected# (\"TextGrid\")",
+		"  .ids$ = \"\"",
+		"  for i from 1 to size (textgrids#)",
+		"  selectObject: textgrids# [i]",
+		"  .id = selected (\"TextGrid\")",
+		"  .ids$ = .ids$ + \"${0:} '.id'\"",
+		"  endfor",
+		"  select all",
+		"  sounds# = selected# (\"Sound\")",
+		"  for i from 1 to size (sounds#)",
+		"  selectObject: sounds# [i]",
+		"  .id = selected (\"Sound\")",
+		"  .ids$ = .ids$ + \"${0:} '.id'\"",
+		"  endfor",
+		"endproc",
+		"",
+	],
+	"description": "safe remove proc"
 },
 "create textgrid object": {
 	"prefix": "toTextgrid",
@@ -475,9 +655,37 @@
 "rename an object": {
 	"prefix": "rename",
 	"body": [
-		"Rename: \"${1:newname}\"",
+		"Rename: ${0:newname}",
 	],
 	"description": "rename an object"
+},
+"random integer": {
+	"prefix": "randomInteger",
+	"body": [
+		"randomInteger (1, 1000)",
+	],
+	"description": "random integer"
+},
+"show pulses": {
+	"prefix": "showPulses",
+	"body": [
+		"Show pulses",
+	],
+	"description": "show pulses"
+},
+"spec,f0,intensi,f,p": {
+	"prefix": "showAnalysis",
+	"body": [
+		"Show analyses... yes no no yes yes 20.0",
+	],
+	"description": "spec,f0,intensi,f,p"
+},
+"random real": {
+	"prefix": "randomReal",
+	"body": [
+		"randomUniform (1, 10)",
+	],
+	"description": "random real"
 },
 "convert to number": {
 	"prefix": "convertNumber",
@@ -493,20 +701,6 @@
 	],
 	"description": "convert to string"
 },
-"select an object": {
-	"prefix": "select",
-	"body": [
-		"selectObject: ${1:multipleObjectsSeperatedbyComma}",
-	],
-	"description": "select an object"
-},
-"plus an object": {
-	"prefix": "plus",
-	"body": [
-		"plusObject: $1",
-	],
-	"description": "plus an object"
-},
 "minus an object": {
 	"prefix": "minus",
 	"body": [
@@ -517,7 +711,7 @@
 "remove an object without selecting": {
 	"prefix": "removeObject",
 	"body": [
-		"removeObject: ${1:differentObjectsSeperatedByComma}",
+		"removeObject: $0",
 	],
 	"description": "remove an object without selecting"
 },
@@ -570,5 +764,700 @@
 		"Get time of maximum: ${1:whichFormant}, 0, 0, \"Hertz\", \"Parabolic\"",
 	],
 	"description": "get time of maximum formant"
+},
+"number array": {
+	"prefix": "arrayNum",
+	"body": [
+		"squares# = { 1, 4, 9, 16, 25 }",
+		"for i from 1 to (sizesquares#)",
+		"  appendInfoLine: squares#[i]",
+		"endfor",
+	],
+	"description": "number array"
+},
+"string array": {
+	"prefix": "arrayStr",
+	"body": [
+		"$text[i] = \"hehe\"",
+	],
+	"description": "string array"
+},
+"get selected name": {
+	"prefix": "getSelectedName",
+	"body": [
+		"selected$ (\"${0:type}\")",
+	],
+	"description": "get selected name"
+},
+"get selected id": {
+	"prefix": "getSelectedId",
+	"body": [
+		"selected (\"${0:number}\")",
+	],
+	"description": "get selected id"
+},
+"get selected full name": {
+	"prefix": "getSelectedFullName",
+	"body": [
+		"fullName$ = selected$ ()",
+		"type$ = extractWord$ ($fullName, \"\")",
+		"name$ = extractLine$ ($fullName, \"\" \"\")",
+	],
+	"description": "get selected full name"
+},
+"selected textgrids": {
+	"prefix": "rtSelectedTextgrid",
+	"body": [
+		"select all",
+		"textgrids# = selected# (\"TextGrid\")",
+		"for i from 1 to size (textgrids#)",
+		"  selectObject: textgrids# [i]",
+		"  $0",
+		"endfor",
+	],
+	"description": "selected textgrids"
+},
+"selected sounds": {
+	"prefix": "rtSelectedSound",
+	"body": [
+		"select all",
+		"sounds# = selected# (\"Sound\")",
+		"for i from 1 to size (sounds#)",
+		"  selectObject: sounds# [i]",
+		"  $0",
+		"endfor",
+	],
+	"description": "selected sounds"
+},
+"do to all textgrids": {
+	"prefix": "rtAllTextgridObjects",
+	"body": [
+		"textgrids# = selected (\"#TextGrid\")",
+		"for iii from 1 to size (textgrids#)",
+		"  selectObject: textgrids# [iii]",
+		"$0",
+		"endfor",
+	],
+	"description": "do to all textgrids"
+},
+"variable exist": {
+	"prefix": "existVariable",
+	"body": [
+		"variableExists ($0)",
+	],
+	"description": "variable exist"
+},
+"get right string": {
+	"prefix": "getRight",
+	"body": [
+		"right$ ($1, ${0:n})",
+	],
+	"description": "get right string"
+},
+"get left string": {
+	"prefix": "getLeft",
+	"body": [
+		"left$ ($1, ${0:n})",
+	],
+	"description": "get left string"
+},
+"get middle string": {
+	"prefix": "getMiddle",
+	"body": [
+		"mid$ ($1 , 3, ${0:2c})",
+	],
+	"description": "get middle string"
+},
+"length": {
+	"prefix": "lengthString",
+	"body": [
+		"length ($0)",
+	],
+	"description": "length"
+},
+"get length string": {
+	"prefix": "getLenStr",
+	"body": [
+		"length ($0)",
+	],
+	"description": "get length string"
+},
+"get right index": {
+	"prefix": "getRightIndex",
+	"body": [
+		"rindex (${1:searchAt}, ${0:searchFor})",
+	],
+	"description": "get right index"
+},
+"get left index": {
+	"prefix": "getLeftIndex",
+	"body": [
+		"index (${1:searchAt}, ${0:searchFor})",
+	],
+	"description": "get left index"
+},
+"horizontal": {
+	"prefix": "horizontal",
+	"body": [
+		"appendInfoLine: \"----------------\"",
+	],
+	"description": "horizontal"
+},
+"get number of strings": {
+	"prefix": "getNbStr",
+	"body": [
+		"nbOfStr = Get number of strings",
+	],
+	"description": "get number of strings"
+},
+"loop string": {
+	"prefix": "rtLoopStr",
+	"body": [
+		"noOfStr = Get number of strings",
+		"for i from 1 to nbOfStr",
+		"selectObject: fList",
+		"fName$ = Get string: i",
+		"f = Read from file: dir$ + \"/\" + fName$",
+		"# do",
+		"endfor",
+	],
+	"description": "loop string"
+},
+"get string": {
+	"prefix": "getStr",
+	"body": [
+		"Get string: ${0:row}",
+	],
+	"description": "get string"
+},
+"get label": {
+	"prefix": "getLabel",
+	"body": [
+		"Get label of interval: ${1:tier}, ${0:interval}",
+	],
+	"description": "get label"
+},
+"get label at time": {
+	"prefix": "getIntervalTime",
+	"body": [
+		"Get interval at time: ${1:tier}, ${0:time}",
+	],
+	"description": "get label at time"
+},
+"get label editor": {
+	"prefix": "getLabelEdit",
+	"body": [
+		"Get label of interva",
+	],
+	"description": "get label editor"
+},
+"get label editor": {
+	"prefix": "getIntervalEdit",
+	"body": [
+		"Get label of interval",
+	],
+	"description": "get label editor"
+},
+"set label": {
+	"prefix": "setLabel",
+	"body": [
+		"Set interval text: ${1:tier}, ${2:interval}, ${3:text}",
+	],
+	"description": "set label"
+},
+"set label editor": {
+	"prefix": "setLabelEdit",
+	"body": [
+		"Set interval text:",
+	],
+	"description": "set label editor"
+},
+"get label": {
+	"prefix": "getInterval",
+	"body": [
+		"Get label of interval: ${1:tier}, ${0:interval}",
+	],
+	"description": "get label"
+},
+"set label": {
+	"prefix": "setInterval",
+	"body": [
+		"Set interval text: ${1:tier}, ${2:interval}, ${3:text}",
+	],
+	"description": "set label"
+},
+"extract one channel": {
+	"prefix": "extractChannel",
+	"body": [
+		"Extract one channel: $0",
+	],
+	"description": "extract one channel"
+},
+"extract all channels": {
+	"prefix": "extractAllChannels",
+	"body": [
+		"Extract all channels",
+	],
+	"description": "extract all channels"
+},
+"done": {
+	"prefix": "done",
+	"body": [
+		"appendInfoLine: \"done! $0\"",
+	],
+	"description": "done"
+},
+"duplicate tier": {
+	"prefix": "dupTier",
+	"body": [
+		"Duplicate tier: 1, 2, \"${0:name}\"",
+	],
+	"description": "duplicate tier"
+},
+"remove tier": {
+	"prefix": "rmTier",
+	"body": [
+		"Remove tier: $0",
+	],
+	"description": "remove tier"
+},
+"stereo": {
+	"prefix": "stereo",
+	"body": [
+		"Combine to stereo",
+	],
+	"description": "stereo"
+},
+"remove all/caution!": {
+	"prefix": "removeAll",
+	"body": [
+		"select all",
+		"Remove",
+	],
+	"description": "remove all/caution!"
+},
+"get starting time tier interval": {
+	"prefix": "getStartLabel",
+	"body": [
+		"Get starting point: 1, 1",
+	],
+	"description": "get starting time tier interval"
+},
+"get ending time tier interval": {
+	"prefix": "getEndLabel",
+	"body": [
+		"Get end point: 1, 1",
+	],
+	"description": "get ending time tier interval"
+},
+"do sth to each file": {
+	"prefix": "rtLoopFiles",
+	"body": [
+		"dir$ = \"$1\"",
+		"fList = Create Strings as file list: \"list\", dir$ + \"*.wav\"",
+		"nbOfFiles = Get number of strings",
+		"for i from 1 to nbOfFiles",
+		"  selectObject: fList",
+		"  fName$ = Get string: i",
+		"  fPath$ = Read from file: dir$ + fName$",
+		"  # do",
+		"  $0",
+		"endfor",
+	],
+	"description": "do sth to each file"
+},
+"simple pause": {
+	"prefix": "crSimplePause",
+	"body": [
+		"pauseScript: \"$0\"",
+	],
+	"description": "simple pause"
+},
+"form template": {
+	"prefix": "rtForm",
+	"body": [
+		"form text",
+		"  real var 1",
+		"  comment hehe",
+		"  text hehe \"ga\"",
+		"  boolean hehe 1",
+		"  choice Colour: 2",
+		"  button Dark red",
+		"  button Sea green",
+		"endform",
+	],
+	"description": "form template"
+},
+"pause template": {
+	"prefix": "rtPause",
+	"body": [
+		"beginPause: \"title\"",
+		"  comment: \"text\"",
+		"  positive: \"a positive\", 1",
+		"  real: \"a real\", 2",
+		"  text: \"enter text\", \"t\"",
+		"  boolean: \"a boolean\", 1",
+		"  choice: \"Team\", 3",
+		"  option: \"a\"",
+		"  option: \"b\"",
+		"  option: \"c\"",
+		"clicked = endPause: \"start\", 1",
+	],
+	"description": "pause template"
+},
+"stop": {
+	"prefix": "stop",
+	"body": [
+		"pauseScript: message",
+	],
+	"description": "stop"
+},
+"do sth to each directory": {
+	"prefix": "rtLoopDir",
+	"body": [
+		"dir$ = \"$1\"",
+		"dList = Create Strings as directory list: \"dir\", dir$",
+		"nbOfDirs = Get number of strings",
+		"for i from 1 to nbOfDirs",
+		"  selectObject: dList",
+		"  dName$ = Get string: i",
+		"  dPath$ = Read from file: dir$ + dName$",
+		"  # do",
+		"  $0",
+		"endfor",
+	],
+	"description": "do sth to each directory"
+},
+"addDynam": {
+	"prefix": "addDynamic",
+	"body": [
+		"Add action command: \"Sound\", 0, \"\", 0, \"\", 0, \"clearAll\", \"\", 0, \"path\"",
+	],
+	"description": "addDynam"
+},
+"addButton": {
+	"prefix": "Add action command: "Sound", 1, "", 0, "", 0, "Usual", "", 0, """,
+	"body": [
+		"Add action command: \"Sound\", 1, \"\", 0, \"\", 0, \"removeAll\", \"Usual\", 1, \"/Users/xiaoou/Documents/vscPlugins/awesome_praat_snippets/clearAll.praat\"",
+	],
+	"description": "addButton"
+},
+"create a pause": {
+	"prefix": "crPause",
+	"body": [
+		"beginPause: \"where to save?\"",
+		"  text: \"save path\", \"t\"",
+		"clicked = endPause: \"start\", 1",
+	],
+	"description": "create a pause"
+},
+"procedure": {
+	"prefix": "proc",
+	"body": [
+		"procedure do: .arg$",
+		"  appendInfoLine: .arg$",
+		"endproc",
+	],
+	"description": "procedure"
+},
+"procedure1": {
+	"prefix": "proc1",
+	"body": [
+		"@squareNumber: 5",
+		"writeInfoLine: \"The square of 5 is \"\", squareNumber.result, \".\"",
+		"procedure squareNumber: .number",
+		"  .result = .number ^ 2",
+		"endproc",
+	],
+	"description": "procedure1"
+},
+"procedure2": {
+	"prefix": "proc2",
+	"body": [
+		"@squareNumber: \"$0\" # this is the return variable",
+		"writeInfoLine: \"The square of 5 is \"\", $0, \".\"",
+		"procedure squareNumber: .name$",
+		"  $'.name' = 5 ^ 2",
+		"endproc",
+	],
+	"description": "procedure2"
+},
+"get textgrid name": {
+	"prefix": "getTextGridName",
+	"body": [
+		"tgName$ = selected$ (\"TextGrid\")",
+	],
+	"description": "get textgrid name"
+},
+"read txt": {
+	"prefix": "readTxt",
+	"body": [
+		"Read Strings from raw text file: \"$0\"",
+	],
+	"description": "read txt"
+},
+"select first": {
+	"prefix": "selectFirst",
+	"body": [
+		"select all",
+		"$1# = selected# (\"$2\")",
+		"selectObject: $2#[1]",
+	],
+	"description": "select first"
+},
+"routine direcory recursive": {
+	"prefix": "rtLoopDirRecur",
+	"body": [
+		"dir$ = \"$1\"",
+		"dList = Create Strings as directory list: \"dir\", dir$",
+		"nbOfDirs = Get number of strings",
+		"for i from 1 to nbOfDirs",
+		"  selectObject: dList",
+		"  dName$ = Get string: i",
+		"  pathComplet$ = dir$ + dName$",
+		"  appendInfoLine: pathComplet$",
+		"  fList = Create Strings as file list: \"list\", pathComplet$ + \"/\" + \"*.ext\"",
+		"  nbOfFiles = Get number of strings",
+		"  for j from 1 to nbOfFiles",
+		"  selectObject: fList",
+		"  fName$ = Get string: j",
+		"  fPath$ = pathComplet$ + \"/\" + \"$'fName'\"",
+		"  appendInfoLine: fPath$",
+		"  # do something here",
+		"  f = Read from file: fPath$",
+		"  selectObject: f",
+		"  Remove",
+		"  endfor",
+		"  selectObject: fList",
+		"  Remove",
+		"endfor",
+		"selectObject: dList",
+		"Remove",
+	],
+	"description": "routine direcory recursive"
+},
+"rt for intervals": {
+	"prefix": "rtInterval",
+	"body": [
+		"nbLabel = Get number of intervals: 1",
+		"for thisInterval from 1 to nbLabel",
+		"  select TextGrid $'thisTextGrid'",
+		"  phoneme$ = Get label of interval: 1, thisInterval",
+		"endfor",
+	],
+	"description": "rt for intervals"
+},
+"rt for intervals": {
+	"prefix": "rtLabel",
+	"body": [
+		"nbLabel = Get number of intervals: 1",
+		"for thisInterval from 1 to nbLabel",
+		"  phoneme$ = Get label of interval: 1, thisInterval",
+		"  $0",
+		"endfor",
+	],
+	"description": "rt for intervals"
+},
+"rt for textgrid's labels": {
+	"prefix": "rtTextgrid",
+	"body": [
+		"nbLabel = Get number of intervals: 1",
+		"for thisInterval from 1 to nbLabel",
+		"  phoneme$ = Get label of interval: 1, thisInterval",
+		"  $0",
+		"endfor",
+	],
+	"description": "rt for textgrid's labels"
+},
+"rt for intervals": {
+	"prefix": "rtIntervals",
+	"body": [
+		"nbLabel = Get number of intervals: 1",
+		"for thisInterval from 1 to nbLabel",
+		"  phoneme$ = Get label of interval: 1, thisInterval",
+		"  $0",
+		"endfo",
+	],
+	"description": "rt for intervals"
+},
+"get number of intervals": {
+	"prefix": "getNbInterval",
+	"body": [
+		"Get number of intervals: ${0:whichTier}",
+	],
+	"description": "get number of intervals"
+},
+"insert boundary": {
+	"prefix": "insBoundary",
+	"body": [
+		"Insert boundary: ${1:tier}, ${0:time}",
+	],
+	"description": "insert boundary"
+},
+"insert boundary": {
+	"prefix": "crBoundary",
+	"body": [
+		"Insert boundary: ${1:tier}, ${0:time}",
+	],
+	"description": "insert boundary"
+},
+"extract part sound": {
+	"prefix": "extractPartSound",
+	"body": [
+		"Extract part: ${1:intervalstart}, ${0:intervalend}, \"rectangular\", 1, \"no\"",
+	],
+	"description": "extract part sound"
+},
+"extract part textgrid": {
+	"prefix": "extractPartTextgri",
+	"body": [
+		"Extract part: ${1:intervalstart}, ${0:intervalend}, \"no\"",
+	],
+	"description": "extract part textgrid"
+},
+"to wordlist": {
+	"prefix": "toWord",
+	"body": [
+		"To WordList",
+	],
+	"description": "to wordlist"
+},
+"has word": {
+	"prefix": "hasWord",
+	"body": [
+		"Has word: $0",
+		"",
+	],
+	"description": "has word"
+},
+"round number to zero": {
+	"prefix": "round",
+	"body": [
+		"(${r:ound1number})",
+	],
+	"description": "round number to zero"
+},
+"round number to decimal precision": {
+	"prefix": "roundPrecision",
+	"body": [
+		"(${n:umberfixed1number21precision}),",
+		"$0",
+	],
+	"description": "round number to decimal precision"
+},
+"passband filter": {
+	"prefix": "passband",
+	"body": [
+		"Filter (pass Hann band:) ${1:from}, ${0:to} , 100",
+	],
+	"description": "passband filter"
+},
+"create file list": {
+	"prefix": "readFiles",
+	"body": [
+		"Create Strings as file list: \"list\", \"*.wav\"",
+	],
+	"description": "create file list"
+},
+"read a file": {
+	"prefix": "readFile",
+	"body": [
+		"Read from file: $1",
+	],
+	"description": "read a file"
+},
+"read long file": {
+	"prefix": "readLongFile",
+	"body": [
+		"Open long sound file: $1",
+	],
+	"description": "read long file"
+},
+"save wav file": {
+	"prefix": "saveWav",
+	"body": [
+		"Save as WAV file: $1",
+	],
+	"description": "save wav file"
+},
+"save txt file (textgrid too)": {
+	"prefix": "saveTxt",
+	"body": [
+		"Save as text file: $1",
+	],
+	"description": "save txt file (textgrid too)"
+},
+"remove a file": {
+	"prefix": "remove",
+	"body": [
+		"Remove",
+	],
+	"description": "remove a file"
+},
+"play a sound": {
+	"prefix": "play",
+	"body": [
+		"Play",
+	],
+	"description": "play a sound"
+},
+"play a pitch": {
+	"prefix": "playPitch",
+	"body": [
+		"Hum",
+	],
+	"description": "play a pitch"
+},
+"create directory": {
+	"prefix": "crFolder",
+	"body": [
+		"createDirectory: \"${0:directoryPath}\"",
+	],
+	"description": "create directory"
+},
+"create directory": {
+	"prefix": "crDirectory",
+	"body": [
+		"createDirectory: \"${0:directoryPath}\"",
+	],
+	"description": "create directory"
+},
+"delete file": {
+	"prefix": "deleteFile",
+	"body": [
+		"deleteFile: ${1:filePath}",
+	],
+	"description": "delete file"
+},
+"check file existence and readability": {
+	"prefix": "checkFile",
+	"body": [
+		"fileReadable ($1)",
+		"$0",
+	],
+	"description": "check file existence and readability"
+},
+"write line to file": {
+	"prefix": "writeLineToFile",
+	"body": [
+		"writeFileLine: \"${1:filePath}\", ${2:content}",
+		"$0",
+	],
+	"description": "write line to file"
+},
+"append line to file, no need to have the file prexisting": {
+	"prefix": "appendLine",
+	"body": [
+		"appendFileLine: \"${1:filePath}\", ${2:content}",
+		"$0",
+	],
+	"description": "append line to file, no need to have the file prexisting"
+},
+"allow user to choose directory": {
+	"prefix": "chooseDirectory",
+	"body": [
+		"chooseDirectory$: \"${1:chooseTheDirectoryContainingSound}\"",
+	],
+	"description": "allow user to choose directory"
 }
 }

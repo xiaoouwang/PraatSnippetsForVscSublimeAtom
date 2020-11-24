@@ -1,0 +1,743 @@
+### information beginning
+# write (overwrite)
+print
+writeInfoLine: $0
+# write (overwrite)
+write
+writeInfoLine: $0
+# write (new line)
+println
+appendInfoLine: $0
+# write (new line)
+append
+appendInfoLine: $0
+# clear information
+clear
+clearinfo
+# output the info window
+printInfoWindow
+appendFile: "$1:outputFilePath", info$()
+$0
+# create a form
+crForm
+form $1
+  $0
+endform
+# convert to string
+toString
+string$($0)
+# convert to number
+toNumber
+number($0)
+# check file exists
+exist1
+fileReadable: ($0)
+# get object type
+getType
+type$ = extractWord$ ($1:fullname, "$0")
+# get object name
+getName
+name$ = extractLine$ ($1:fullname, "$0:space")
+# get object numbers sound or others
+getNumberSelected
+nb = numberOfSelected("Sound")
+# home
+home
+homeDirectory$
+# undefined
+und
+undefined
+# exit
+exit
+exit $0:message
+# replace interval
+replaceInterval
+Replace interval texts: 1, 1, 0, "a", "sound", "Literals" # 1,0 = all the intervals
+# concatenate
+concat
+Concatenate
+# select all
+selectAll
+select all
+# get start of selection
+getStartSelec
+Get start of selection
+
+### graphics beginning
+# erase the whole graphics
+eraseGraph
+Erase all
+# draw a sound waveform
+drWaveform
+Draw: 0, 0, 0, 0, "yes", "Curve"
+# draw intensty
+drIntensity
+Draw: 0, $1:timeRange, 0, $2:decibelRange, "no"
+# draw inner box
+drInnerBox
+Draw inner box
+# set Y step
+setYstep
+Marks left every: 1, $2:maybe50, "yes", "yes", "no"
+# draw pitch
+drPitch
+Draw: 0, 0, $1:range1, $2:range2, "no"
+# set outer viewport
+setOuterView
+Select outer viewport: 0, $1:horizontal, $2:verticalUp, $3:verticalDown
+# set line width
+setLineWidth
+Line width: $1:1
+# set line form
+setLineForm
+$1:Solid line
+# set y label
+setY
+Text left: "yes", "$1"
+$0
+# set color
+color
+$1:Red
+### editor beginning
+# create an edit window
+edit
+Edit
+# enter an edit window
+selectEditor
+editor: "$1:type $0:name"
+# zoom
+zoom
+Zoom in
+# end an editor
+endEditor
+endeditor
+# close an editor
+close
+Close
+# move cursor to
+moveCursorTo
+Move cursor to: $1:valueInSecond
+# move cursor by
+moveCursorBy
+Move end of seletion by: $2:valueInSecond
+# zoom selection
+zoomSelection
+Zoom to selection
+# extract selection
+extractSelection
+Extract selected sound (time from 0)
+# play the editor
+playEditor
+Play window
+# draw visible sound
+drVisible
+Draw visible sound: "no", "yes", 0, 0, "no", "no", "no", "yes"
+# extract selectionHamming
+extractHamming
+Extract selected sound (windowed): "slice", "Hamming", 1, "yes"
+# select next interval
+selectNextInterval
+Select next interval
+# to spectrum
+toSpectrum
+To Spectrum: "no"
+# get sampling freq
+getSampling
+Get sampling frequency
+### others beginning
+# mac
+mac
+macintosh
+# windows
+windows
+windows
+# unix
+unix
+unix
+# unix
+linux
+unix
+# tab character
+tab
+tab$
+# newline character
+newLine
+newline$
+# select a variable
+select
+selectObject: $0
+# minus a variable
+minus
+minusObject: $0
+# plus a variable
+plusObject
+plusObject: $0
+# select a spectrum
+selectSpectrum
+selectObject: "Spectrum $0"
+# minus a spectrum
+minusSpectrum
+minusObject: "Spectrum $0"
+# plus a spectrum
+plusSpectrum
+plusObject: "Spectrum $0"
+# select a TextGrid
+selectTextGrid
+selectObject: "TextGrid $0"
+# minus a spectrum
+minusTextGrid
+minusObject: "TextGrid $0"
+# plus a spectrum
+plusTextGrid
+plusObject: "TextGrid $0"
+# select an object
+selectSound
+selectObject: "Sound $0"
+# minus an object
+minusSound
+minusObject: "Sound $0"
+# plus an object
+plusSound
+plusObject: "Sound $0"
+### conditions and loop
+# for loop
+for
+for i from 1 to $1
+  $0:doSomething
+endfor
+# while loop
+while
+while $1
+  $2
+endwhile
+$0
+# if
+if
+if $1
+  $0
+endif
+# if else
+ifelse
+if $1
+  $2
+elsif $3
+  $4
+endif
+$0
+# if exist
+ifexist
+if $1 <> ""
+  $0
+endif
+# tokens
+crTokens
+Create Strings as tokens: $1, "$0:space"
+# exist2
+exist2
+$0 <> ""
+# safe remove end
+safeRemoveEnd
+@ids.final
+# safe remove start
+safeRemoveStart
+@ids
+initialSelections$ = ids.ids$
+# safe remove proc
+safeRemoveProc
+procedure ids.final
+@ids
+finalSelections$ = ids.ids$
+wangIds = Create Strings as tokens: finalSelections$ , "$0:space"
+nbOfStr = Get number of strings
+for i from 1 to nbOfStr
+  select wangIds
+  id = Get string: i
+  if index (initialSelections$ , string$ (id) ) = 0
+    selectObject: id
+    Remove
+  endif
+endfor
+removeObject: wangIds
+endproc
+
+procedure ids
+  endeditor
+  select all
+  textgrids# = selected# ("TextGrid")
+  .ids$ = ""
+  for i from 1 to size (textgrids#)
+    selectObject: textgrids# [i]
+    .id = selected ("TextGrid")
+    .ids$ = .ids$ +  "$0: '.id'"
+  endfor
+  select all
+  sounds# = selected# ("Sound")
+  for i from 1 to size (sounds#)
+    selectObject: sounds# [i]
+    .id = selected ("Sound")
+    .ids$ = .ids$ + "$0: '.id'"
+  endfor
+endproc
+
+### object creation beginning
+# create textgrid object
+toTextgrid
+To TextGrid: "$1:muitipleTiersSeperatedBySpace", "$2:eventTier"
+$0
+# create formant object
+toFormant
+To Formant (burg): 0, 5, $1:5000forMale5500forWomen, 0.025, 50
+$0
+# create pitch object
+toPitch
+To Pitch: $1:0timestep, $1:75floor, $2:600ceiling
+# create intensity object
+toIntensity
+To Intensity: $1:100(maximumPitch), $2:0(timestep), "yes"
+# create a tone with duration and fundamental frequency
+toTone
+Create Sound as pure tone: "$1:objectName", 1, 0, $2:duration, 44100, $3:fundamentalFrequency, 0.2, 0.01, 0.01
+$0
+# create sound from formula
+toSoundwithFormula
+Create Sound from formula "$1:objectName", 1, 0, $2:duration, $3:frequency, "$4:formula"
+$0
+### object manipulation
+# choose selected object
+chooseSelected
+selected()
+# copy an object (often useful to make a object last on the list)
+Copy: "$1:newname"
+$0
+# remove selected files
+removeSelected
+Remove
+# play a sound
+play
+Play
+# play a pitch
+playPitch
+Hum
+# rename an object
+rename
+Rename: $0:newname
+# random integer
+randomInteger
+randomInteger (1, 1000)
+# show pulses
+showPulses
+Show pulses
+# spec,f0,intensi,f,p
+showAnalysis
+Show analyses... yes no no yes yes 20.0
+# random real
+randomReal
+randomUniform (1, 10)
+# convert to number
+convertNumber
+number($1:stringToConvert)
+# convert to string
+convertString
+string($2:numberToConvert)
+# minus an object
+minus
+minusObject: $1
+# remove an object without selecting
+removeObject
+removeObject: $0
+### object query
+# get maximum pitch
+getMaximumPitch
+Get maximum: $1:0timerange, 0, "Hertz", "Parabolic"
+$0
+# get sound frequency
+getFrequency
+Get sampling frequency
+# get information
+getInfo
+Info
+# get sound duration
+getDuration
+Get total duration
+# get mean
+getMean
+Get mean: 1, 0, 0, "Hertz"
+# get standard deviation
+getSd
+Get standard deviation: 1, 0, 0, "Hertz"
+# get time of maximum formant
+getTimeMaximumFormant
+Get time of maximum: $1:whichFormant, 0, 0, "Hertz", "Parabolic"
+# number array
+arrayNum
+squares# = { 1, 4, 9, 16, 25 }
+for i from 1 to size(squares#)
+  appendInfoLine: squares#[i]
+endfor
+# string array
+arrayStr
+$text[i] = "hehe"
+# get selected name
+getSelectedName
+selected$ ("$0:type")
+# get selected id
+getSelectedId
+selected ("$0:number")
+# get selected full name
+getSelectedFullName
+fullName$ = selected$ ()
+type$ = extractWord$ (fullName$, "")
+name$ = extractLine$ (fullName$, " ")
+# selected textgrids
+rtSelectedTextgrid
+select all
+textgrids# = selected# ("TextGrid")
+for i from 1 to size (textgrids#)
+  selectObject: textgrids# [i]
+  $0
+endfor
+# selected sounds
+rtSelectedSound
+select all
+sounds# = selected# ("Sound")
+for i from 1 to size (sounds#)
+  selectObject: sounds# [i]
+  $0
+endfor
+# do to all textgrids
+rtAllTextgridObjects
+textgrids# = selected #("TextGrid")
+for iii from 1 to size (textgrids#)
+  selectObject: textgrids# [iii]
+	$0
+endfor
+# variable exist
+existVariable
+variableExists ($0)
+# get right string
+getRight
+right$ (1$, $0:n)
+# get left string
+getLeft
+left$ (1$, $0:n)
+# get middle string
+getMiddle
+mid$ ($1 , 3, $0:2c)
+# length
+lengthString
+length ($0)
+# get length string
+getLenStr
+length ($0)
+# get right index
+getRightIndex
+rindex ($1:searchAt, $0:searchFor)
+# get left index
+getLeftIndex
+index ($1:searchAt, $0:searchFor)
+# horizontal
+horizontal
+appendInfoLine: "----------------"
+# get number of strings
+getNbStr
+nbOfStr = Get number of strings
+# loop string
+rtLoopStr
+noOfStr = Get number of strings
+for i from 1 to nbOfStr
+	selectObject: fList
+	fName$ = Get string: i
+	f = Read from file: dir$ + "/" + fName$
+	# do
+endfor
+# get string
+getStr
+Get string: $0:row
+# get label
+getLabel
+Get label of interval: $1:tier, $0:interval
+# get label at time
+getIntervalTime
+Get interval at time: $1:tier, $0:time
+# get label editor
+getLabelEdit
+Get label of interva
+# get label editor
+getIntervalEdit
+Get label of interval
+# set label
+setLabel
+Set interval text: $1:tier, $2:interval, $3:text
+# set label editor
+setLabelEdit
+Set interval text:
+# get label
+getInterval
+Get label of interval: $1:tier, $0:interval
+# set label
+setInterval
+Set interval text: $1:tier, $2:interval, $3:text
+# extract one channel
+extractChannel
+Extract one channel: $0
+# extract all channels
+extractAllChannels
+Extract all channels
+# done
+done
+appendInfoLine: "done! $0"
+# duplicate tier
+dupTier
+Duplicate tier: 1, 2, "$0:name"
+# remove tier
+rmTier
+Remove tier: $0
+# stereo
+stereo
+Combine to stereo
+### routines beginning : these are very common tasks in daily scripting files. We call them routines.
+# remove all/caution!
+removeAll
+select all
+Remove
+# get starting time tier interval
+getStartLabel
+Get starting point: 1, 1
+# get ending time tier interval
+getEndLabel
+Get end point: 1, 1
+# do sth to each file
+rtLoopFiles
+dir$ = "$1"
+fList = Create Strings as file list: "list", dir$ + "*.wav"
+nbOfFiles = Get number of strings
+for i from 1 to nbOfFiles
+    selectObject: fList
+    fName$ = Get string: i
+    fPath$ = Read from file: dir$ + fName$
+    # do
+    $0
+endfor
+# simple pause
+crSimplePause
+pauseScript: "$0"
+# form template
+rtForm
+form text
+    real var 1
+    comment hehe
+    text hehe "ga"
+    boolean hehe 1
+    choice Colour: 2
+       button Dark red
+       button Sea green
+endform
+# pause template
+rtPause
+beginPause: "title"
+    comment: "text"
+    positive: "a positive", 1
+    real: "a real", 2
+    text: "enter text", "t"
+    boolean: "a boolean", 1
+  	choice: "Team", 3
+  		option: "a"
+  		option: "b"
+  		option: "c"
+clicked = endPause: "start", 1
+# stop
+stop
+pauseScript: message
+# do sth to each directory
+rtLoopDir
+dir$ = "$1"
+dList = Create Strings as directory list: "dir", dir$
+nbOfDirs = Get number of strings
+for i from 1 to nbOfDirs
+    selectObject: dList
+    dName$ = Get string: i
+    dPath$ = Read from file: dir$ + dName$
+    # do
+    $0
+endfor
+# addDynam
+addDynamic
+Add action command: "Sound", 0, "", 0, "", 0, "clearAll", "", 0, "path"
+# addButton
+Add action command: "Sound", 1, "", 0, "", 0, "Usual", "", 0, ""
+Add action command: "Sound", 1, "", 0, "", 0, "removeAll", "Usual", 1, "/Users/xiaoou/Documents/vscPlugins/awesome_praat_snippets/clearAll.praat"
+# create a pause
+crPause
+beginPause: "where to save?"
+  text: "save path", "t"
+clicked = endPause: "start", 1
+# procedure
+proc
+procedure do: .arg$
+  appendInfoLine: .arg$
+endproc
+# procedure1
+proc1
+@squareNumber: 5
+writeInfoLine: "The square of 5 is ", squareNumber.result, "."
+procedure squareNumber: .number
+    .result = .number ^ 2
+endproc
+# procedure2
+proc2
+@squareNumber: "$0" # this is the return variable
+writeInfoLine: "The square of 5 is ", $0, "."
+procedure squareNumber: .name$
+    '.name$' = 5 ^ 2
+endproc
+# get textgrid name
+getTextGridName
+tgName$ = selected$ ("TextGrid")
+# read txt
+readTxt
+Read Strings from raw text file: "$0"
+# select first
+selectFirst
+select all
+$1# = selected# ("$2")
+selectObject: $2#[1]
+# routine direcory recursive
+rtLoopDirRecur
+dir$ = "$1"
+dList = Create Strings as directory list: "dir", dir$
+nbOfDirs = Get number of strings
+for i from 1 to nbOfDirs
+  selectObject: dList
+  dName$ = Get string: i
+  pathComplet$ = dir$ + dName$
+  appendInfoLine: pathComplet$
+  fList = Create Strings as file list: "list", pathComplet$ + "/" + "*.ext"
+  nbOfFiles = Get number of strings
+  for j from 1 to nbOfFiles
+    selectObject: fList
+    fName$ = Get string: j
+    fPath$ = pathComplet$ + "/" + "'fName$'"
+    appendInfoLine: fPath$
+    # do something here
+    f = Read from file: fPath$
+    selectObject: f
+    Remove
+  endfor
+  selectObject: fList
+  Remove
+endfor
+selectObject: dList
+Remove
+# rt for intervals
+rtInterval
+nbLabel = Get number of intervals: 1
+for thisInterval from 1 to nbLabel
+    select TextGrid 'thisTextGrid$'
+    phoneme$ = Get label of interval: 1, thisInterval
+endfor
+# rt for intervals
+rtLabel
+nbLabel = Get number of intervals: 1
+for thisInterval from 1 to nbLabel
+    phoneme$ = Get label of interval: 1, thisInterval
+    $0
+endfor
+# rt for textgrid's labels
+rtTextgrid
+nbLabel = Get number of intervals: 1
+for thisInterval from 1 to nbLabel
+    phoneme$ = Get label of interval: 1, thisInterval
+    $0
+endfor
+# rt for intervals
+rtIntervals
+nbLabel = Get number of intervals: 1
+for thisInterval from 1 to nbLabel
+    phoneme$ = Get label of interval: 1, thisInterval
+    $0
+endfo
+# get number of intervals
+getNbInterval
+Get number of intervals: $0:whichTier
+# insert boundary
+insBoundary
+Insert boundary: $1:tier, $0:time
+# insert boundary
+crBoundary
+Insert boundary: $1:tier, $0:time
+# extract part sound
+extractPartSound
+Extract part: $1:intervalstart, $0:intervalend, "rectangular", 1, "no"
+# extract part textgrid
+extractPartTextgri
+Extract part: $1:intervalstart, $0:intervalend, "no"
+# to wordlist
+toWord
+To WordList
+# has word
+hasWord
+Has word: $0
+
+### formulas beginning
+# round number to zero
+round
+round($1:number)
+# round number to decimal precision
+roundPrecision
+number(fixed$($1:number,$2:1precision))
+$0
+# passband filter
+passband
+Filter (pass Hann band): $1:from, $0:to , 100
+### file and directory operations beginning
+# create file list
+readFiles
+Create Strings as file list: "list", "*.wav"
+# read a file
+readFile
+Read from file: $1
+# read long file
+readLongFile
+Open long sound file: $1
+# save wav file
+saveWav
+Save as WAV file: $1
+# save txt file (textgrid too)
+saveTxt
+Save as text file: $1
+# remove a file
+remove
+Remove
+# play a sound
+play
+Play
+# play a pitch
+playPitch
+Hum
+# create directory
+crFolder
+createDirectory: "$0:directoryPath"
+# create directory
+crDirectory
+createDirectory: "$0:directoryPath"
+# delete file
+deleteFile
+deleteFile: $1:filePath
+# check file existence and readability
+checkFile
+fileReadable ($1)
+$0
+# write line to file
+writeLineToFile
+writeFileLine: "$1:filePath", $2:content
+$0
+# append line to file, no need to have the file prexisting
+appendLine
+appendFileLine: "$1:filePath", $2:content
+$0
+# allow user to choose directory
+chooseDirectory
+chooseDirectory$: "$1:chooseTheDirectoryContainingSound"
+# allow user to choose file to open
+chooseFile
+chooseReadFile$: "$1:open a file"

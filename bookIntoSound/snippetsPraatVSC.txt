@@ -1,0 +1,143 @@
+{
+"convert to pitch object": {
+	"prefix": "toPitch",
+	"body": [
+		"To Pitch: 0, 75, 600",
+	],
+	"description": "convert to pitch object"
+},
+"convert to intensity object": {
+	"prefix": "toIntensity",
+	"body": [
+		"To Intensity: 100, 0, \"yes\"",
+	],
+	"description": "convert to intensity object"
+},
+"": {
+	"prefix": "getMaxPitch",
+	"body": [
+		"Get maximum: 0, 0, \"Hertz\", \"Parabolic\"",
+	],
+	"description": ""
+},
+"": {
+	"prefix": "print",
+	"body": [
+		"writeInfoLine: $1",
+	],
+	"description": ""
+},
+"append to the screen": {
+	"prefix": "println",
+	"body": [
+		"appendInfoLine: $1",
+		"zoom",
+		"Zoom in",
+	],
+	"description": "append to the screen"
+},
+"edit window": {
+	"prefix": "edit",
+	"body": [
+		"Edit",
+	],
+	"description": "edit window"
+},
+"play pitch": {
+	"prefix": "playPitch",
+	"body": [
+		"Hum",
+	],
+	"description": "play pitch"
+},
+"extract part ...relative width, preserve time": {
+	"prefix": "extractPart",
+	"body": [
+		"Extract part: 0, 0.1, \"rectangular\", 1, \"no\"",
+	],
+	"description": "extract part ...relative width, preserve time"
+},
+"erase the drawing window": {
+	"prefix": "eraseAll",
+	"body": [
+		"Erase all",
+	],
+	"description": "erase the drawing window"
+},
+"select line width": {
+	"prefix": "lw",
+	"body": [
+		"Line width: $1",
+	],
+	"description": "select line width"
+},
+"draw view port": {
+	"prefix": "setVp",
+	"body": [
+		"Select outer viewport: 0, 6, 4, 6",
+	],
+	"description": "draw view port"
+},
+"draw inner port": {
+	"prefix": "drawInner",
+	"body": [
+		"Draw inner box",
+	],
+	"description": "draw inner port"
+},
+"draw sound": {
+	"prefix": "drawSound",
+	"body": [
+		"Draw: 0, 0, 0, 0, \"yes\", \"Curve\"",
+	],
+	"description": "draw sound"
+},
+"draw pitch": {
+	"prefix": "drawPitch",
+	"body": [
+		"Draw: 0, 0, 50, 600, \"no\"",
+	],
+	"description": "draw pitch"
+},
+"y axis text": {
+	"prefix": "drawY",
+	"body": [
+		"Text left: \"yes\", \"Frequency (\"Hz\")",
+	],
+	"description": "y axis text"
+},
+"x axis text": {
+	"prefix": "drawX",
+	"body": [
+		"Text bottom... yes \"Time (\"s\")",
+	],
+	"description": "x axis text"
+},
+"mark y axis": {
+	"prefix": "drawYMarks",
+	"body": [
+		"Marks left every: 1, 50, \"yes\", \"yes\", \"no\"",
+	],
+	"description": "mark y axis"
+},
+"mark x axis": {
+	"prefix": "drawXMarks",
+	"body": [
+		"Marks bottom every: 1, 0.005, \"yes\", \"yes\", \"no\"",
+	],
+	"description": "mark x axis"
+},
+"draw intensity": {
+	"prefix": "Draw: 0, 0, 0, 0, "no"",
+	"body": [
+	],
+	"description": "draw intensity"
+},
+"create pure tone mono...amplitude+fadein+fadeout": {
+	"prefix": "createPure",
+	"body": [
+		"Create Sound as pure tone: \"tone\", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01",
+	],
+	"description": "create pure tone mono...amplitude+fadein+fadeout"
+}
+}

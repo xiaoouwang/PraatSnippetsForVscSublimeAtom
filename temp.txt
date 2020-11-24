@@ -1,0 +1,11 @@
+#### A1-P0 Calc
+select Sound sli# First make a spectrum, then an LTAS (which is the only way to find harmonic heights in Praat for some reason)
+noprogress To Spectrum (fft)
+Rename... 'soundname$'
+noprogress To Ltas (1-to-1)
+Rename... 'soundname$'
+
+## Identifies the peak on the spectrum most likely to be F1, that is, the peak
+## closest to the LPC F1 value that is within the range of one harmoniselect Ltas 'soundname$'
+f1_spec = Get frequency of maximum... 'f1_lpc'-150 'f1_lpc'+150 No# Then get the amplitude
+a1_spec = Get value at frequency... 'f1_spec' Nearest

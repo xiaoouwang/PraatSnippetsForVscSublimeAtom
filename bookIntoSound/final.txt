@@ -1,0 +1,65 @@
+# convert to pitch object
+toPitch
+To Pitch: 0, 75, 600
+# convert to intensity object
+toIntensity
+To Intensity: 100, 0, "yes"
+# # get maximum pitch
+getMaxPitch
+Get maximum: 0, 0, "Hertz", "Parabolic"
+# # print to the screen
+print
+writeInfoLine: $1
+# append to the screen
+println
+appendInfoLine: $1
+## zoom in
+zoom
+Zoom in
+# edit window
+edit
+Edit
+# play pitch
+playPitch
+Hum
+# extract part ...relative width, preserve time
+extractPart
+Extract part: 0, 0.1, "rectangular", 1, "no"
+# erase the drawing window
+eraseAll
+Erase all
+# select line width
+lw
+Line width: $1
+# draw view port
+setVp
+Select outer viewport: 0, 6, 4, 6
+# draw inner port
+drawInner
+Draw inner box
+# draw sound
+drawSound
+Draw: 0, 0, 0, 0, "yes", "Curve"
+# draw pitch
+drawPitch
+Draw: 0, 0, 50, 600, "no"
+# y axis text
+drawY
+Text left: "yes", "Frequency (Hz)"
+# x axis text
+drawX
+Text bottom... yes "Time (s)"
+# mark y axis
+drawYMarks
+Marks left every: 1, 50, "yes", "yes", "no"
+# mark x axis
+drawXMarks
+Marks bottom every: 1, 0.005, "yes", "yes", "no"
+# draw intensity
+Draw: 0, 0, 0, 0, "no"
+# create pure tone mono...amplitude+fadein+fadeout
+createPure
+Create Sound as pure tone: "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01
+# create sound with formula
+createFormula
+Create Sound from formula: "name", 1, 0, 1, 44100, "formula"

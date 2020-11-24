@@ -4,8 +4,8 @@ Praat snippets for vsc(visual studio code), atom and sublime text.
 
 This page is maintained by
 
-* [Xiaoou WANG (phd student in speech science)](http://xiaoouwang.github.io)
-* [Xingyu LIU (master student in natural language processing)](https://github.com/xingyuliuNLP)
+- [Xiaoou WANG (master student in natural language processing)](http://xiaoouwang.github.io)
+- [Xingyu LIU (master student in natural language processing)](https://github.com/xingyuliuNLP)
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
@@ -47,13 +47,13 @@ if, while, for, spectro manipulation etc...
 
 ## Features
 
-* 2019-04-30-Tue : Add a website to batch generate and convert your own snippets to Visual Code Studio (vsc), Atom and Sublime. Add a how to contribute section.
+- 2019-04-30-Tue : Add a website to batch generate and convert your own snippets to Visual Code Studio (vsc), Atom and Sublime. Add a how to contribute section.
 
-* 2019-04-17-Wed : Add a lot snippets, still lack a decent documentation
+- 2019-04-17-Wed : Add a lot snippets, still lack a decent documentation
 
-* 2019-04-14-Tues : Add a little part of snippets
+- 2019-04-14-Tues : Add a little part of snippets
 
-* 2019-04-15-Mon : Add syntax highlighting
+- 2019-04-15-Mon : Add syntax highlighting
 
 More features are coming...
 
@@ -61,11 +61,11 @@ More features are coming...
 
 The snippets use the most recent syntax. For information :
 
-* (Old syntax)
-Create Sound as pure tone... tone 1 0 0.4 44100 440 0.2 0.01 0.01
-* (intermediate syntax)
-"Create Sound as pure tone...", "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01
-* (new syntax)
-Create Sound as pure tone: "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01
+- (Old syntax)
+  Create Sound as pure tone... tone 1 0 0.4 44100 440 0.2 0.01 0.01
+- (intermediate syntax)
+  "Create Sound as pure tone...", "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01
+- (new syntax)
+  Create Sound as pure tone: "tone", 1, 0, 0.4, 44100, 440, 0.2, 0.01, 0.01
 
 ## Enjoy praat scripting and your phonetic (speech) science
