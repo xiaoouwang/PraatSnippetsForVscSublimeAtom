@@ -1,2 +1,0 @@
-endeditor
-Get total duration

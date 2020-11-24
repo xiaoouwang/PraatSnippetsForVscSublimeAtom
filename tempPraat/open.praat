@@ -1,1 +1,0 @@
-Open Praat script... "/Users/rosingle/Desktop/praatscript/0afficher.praat"

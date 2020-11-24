@@ -1,3 +1,0 @@
-endeditor
-select all
-Remove
